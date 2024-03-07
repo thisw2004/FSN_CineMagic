@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CineMagic", "CineMagic\CineMagic.csproj", "{59FAB285-9D5F-4DB3-899A-70A2BB5E662B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineMagicApi", "CineMagicApi\CineMagicApi.csproj", "{43228C48-77F4-49B8-9F88-CD0059CC5F81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{59FAB285-9D5F-4DB3-899A-70A2BB5E662B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59FAB285-9D5F-4DB3-899A-70A2BB5E662B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59FAB285-9D5F-4DB3-899A-70A2BB5E662B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43228C48-77F4-49B8-9F88-CD0059CC5F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43228C48-77F4-49B8-9F88-CD0059CC5F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43228C48-77F4-49B8-9F88-CD0059CC5F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43228C48-77F4-49B8-9F88-CD0059CC5F81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/CineMagic.csproj": {}
+    "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicApi/CineMagicApi.csproj": {}
   },
   "projects": {
-    "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/CineMagic.csproj": {
+    "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicApi/CineMagicApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/CineMagic.csproj",
-        "projectName": "CineMagic",
-        "projectPath": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/CineMagic.csproj",
+        "projectUniqueName": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicApi/CineMagicApi.csproj",
+        "projectName": "CineMagicApi",
+        "projectPath": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicApi/CineMagicApi.csproj",
         "packagesPath": "/Users/jorikvanmaaren/.nuget/packages/",
-        "outputPath": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/obj/",
+        "outputPath": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/jorikvanmaaren/.nuget/NuGet/NuGet.Config"
@@ -37,6 +37,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
