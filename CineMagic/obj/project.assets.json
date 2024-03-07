@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/Users/jorikvanmaaren/.nuget/packages/": {}
+    "/Users/joeyseton/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/CineMagic.csproj",
+      "projectUniqueName": "/Users/joeyseton/RiderProjects/FSN_CineMagic/CineMagic/CineMagic.csproj",
       "projectName": "CineMagic",
-      "projectPath": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/CineMagic.csproj",
-      "packagesPath": "/Users/jorikvanmaaren/.nuget/packages/",
-      "outputPath": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/obj/",
+      "projectPath": "/Users/joeyseton/RiderProjects/FSN_CineMagic/CineMagic/CineMagic.csproj",
+      "packagesPath": "/Users/joeyseton/.nuget/packages/",
+      "outputPath": "/Users/joeyseton/RiderProjects/FSN_CineMagic/CineMagic/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/jorikvanmaaren/.nuget/NuGet/NuGet.Config"
+        "/Users/joeyseton/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -62,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/Users/joeyseton/.dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
