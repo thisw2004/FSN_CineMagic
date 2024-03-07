@@ -1,0 +1,30 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page" id="body">
+    <!--<div class="sidebar">
+        <NavMenu />
+    </div>-->
+
+    <main id="body">
+        <div class="top-row px-4" id="navbar">
+@*             <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+ *@            <!--logo here,centered-->
+                <img href="#" alt="logo_CineMagic" class="mx-auto" />
+        </div>
+
+        <article class="content px-4">
+            <h1>Eerstkomende films:</h1>
+            <h1>Bekijk alle films</h1>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1">Alleen van vandaag</label>
+            @* todo:  get films from db (see notes) *@
+        </article>
+    </main>
+</div>
+
+<div id="blazor-error-ui">
+    An unhandled error has occurred.Please contact your systemmanager.
+    <a href="mailto">tdc.swijnenburg@student.avans.nl</a>
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>
