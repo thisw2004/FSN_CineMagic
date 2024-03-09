@@ -1,39 +1,39 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CineMagic.bundle.scp.css",
-      "PackagePath": "staticwebassets\\CineMagic.bundle.scp.css"
+      "Id": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/obj/Debug/net8.0/scopedcss/projectbundle/CineMagic.bundle.scp.css",
+      "PackagePath": "staticwebassets/CineMagic.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\wwwroot\\app.css",
-      "PackagePath": "staticwebassets\\app.css"
+      "Id": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
     },
     {
-      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\wwwroot\\bootstrap\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+      "Id": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\wwwroot\\bootstrap\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+      "Id": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\wwwroot\\favicon.png",
-      "PackagePath": "staticwebassets\\favicon.png"
+      "Id": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CineMagic.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.CineMagic.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CineMagic.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.CineMagic.props",
       "PackagePath": "build\\CineMagic.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CineMagic.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.CineMagic.props",
       "PackagePath": "buildMultiTargeting\\CineMagic.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CineMagic.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.CineMagic.props",
       "PackagePath": "buildTransitive\\CineMagic.props"
     }
   ],

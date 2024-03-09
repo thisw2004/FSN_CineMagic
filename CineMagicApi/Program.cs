@@ -1,9 +1,17 @@
+using CineMagicData.Models;
+using CineMagicData.Repositories;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddTransient<MovieContext>();
+builder.Services.AddTransient<IMovieRepository, MovieRepository>();
+builder.Services.AddDbContext<CineMagicData.Models.MovieContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("default")));
 
 var app = builder.Build();
 
