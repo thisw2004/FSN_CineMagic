@@ -11,7 +11,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<MovieContext>();
 builder.Services.AddTransient<IMovieRepository, MovieRepository>();
 builder.Services.AddDbContext<CineMagicData.Models.MovieContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("default")));
+    options.UseMySQL(builder.Configuration.GetConnectionString("default")));
+builder.Services.AddControllers(); // <-- Added this line
 
 var app = builder.Build();
 
@@ -23,26 +24,29 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.MapControllers(); // <--- Add this line to map the routes in MovieController
 
 var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
 
-app.MapGet("/weatherforecast", () =>
-    {
-        var forecast = Enumerable.Range(1, 5).Select(index =>
-                new WeatherForecast
-                (
-                    DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                    Random.Shared.Next(-20, 55),
-                    summaries[Random.Shared.Next(summaries.Length)]
-                ))
-            .ToArray();
-        return forecast;
-    })
-    .WithName("GetWeatherForecast")
-    .WithOpenApi();
+// app.MapGet("/weatherforecast", () =>
+//     {
+//         var forecast = Enumerable.Range(1, 5).Select(index =>
+//                 new WeatherForecast
+//                 (
+//                     DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+//                     Random.Shared.Next(-20, 55),
+//                     summaries[Random.Shared.Next(summaries.Length)]
+//                 ))
+//             .ToArray();
+//         return forecast;
+//     })
+//     .WithName("GetWeatherForecast")
+//     .WithOpenApi();
+
+
 
 app.Run();
 
