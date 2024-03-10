@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CineMagicData.Migrations
 {
-    [DbContext(typeof(MovieContext))]
+    [DbContext(typeof(Contexts.MovieContext))]
     [Migration("20240308213908_Initial")]
     partial class Initial
     {

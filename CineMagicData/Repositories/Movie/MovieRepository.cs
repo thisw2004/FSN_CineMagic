@@ -5,9 +5,9 @@ namespace CineMagicData.Repositories;
 
 public class MovieRepository : IMovieRepository
 {
-    private readonly MovieContext _ctx;
+    private readonly Contexts.MovieContext _ctx;
     
-    public MovieRepository(MovieContext ctx)
+    public MovieRepository(Contexts.MovieContext ctx)
     {
         _ctx = ctx;
     }

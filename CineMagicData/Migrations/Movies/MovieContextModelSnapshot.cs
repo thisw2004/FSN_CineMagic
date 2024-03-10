@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CineMagicData.Migrations
 {
-    [DbContext(typeof(MovieContext))]
+    [DbContext(typeof(Contexts.MovieContext))]
     partial class MovieContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

@@ -8,11 +8,21 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddTransient<MovieContext>();
+//Add all the necessary things for database connections for movies
+builder.Services.AddTransient<Contexts.MovieContext>();
 builder.Services.AddTransient<IMovieRepository, MovieRepository>();
-builder.Services.AddDbContext<CineMagicData.Models.MovieContext>(options =>
+builder.Services.AddDbContext<Contexts.MovieContext>(options =>
     options.UseMySQL(builder.Configuration.GetConnectionString("default")));
-builder.Services.AddControllers(); // <-- Added this line
+
+//Add all the necessary things for database connections for rooms
+
+builder.Services.AddTransient<Contexts.RoomContext>();
+builder.Services.AddTransient<IRoomRepository, RoomRepository>();
+builder.Services.AddDbContext<Contexts.RoomContext>(options =>
+    options.UseMySQL(builder.Configuration.GetConnectionString("default")));
+
+//Add the api controllers
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
