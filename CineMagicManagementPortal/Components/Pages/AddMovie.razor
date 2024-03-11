@@ -1,123 +1,23 @@
-﻿@page "/add-film"
+﻿@inherits LayoutComponentBase
 
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bioscoop</title>
-  <style>
-    * {
-      background-color: #1d2630;
-    }
+<div class="page">
+    <div class="sidebar">
+        <NavMenu/>
+    </div>
 
-    .nav-bar {
-      height: 82px;
-      background-color: orange;
-      align-items: center;
-      text-align: center;
-      font-size: xx-large;
-      color: white;
-    }
+    <main>
+        <div class="top-row px-4">
+            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+        </div>
 
-    section {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
 
-    .container {
-      position: relative;
-    }
-
-    .container header {
-      font-size: 1.5rem;
-      color: #333;
-      font-weight: 500;
-      text-align: center;
-    }
-
-    .container .form {
-      margin-top: 30px;
-    }
-
-    .form .input-box {
-      width: 100%;
-      margin-top: 20px;
-    }
-
-    .form .input-box input {
-      position: relative;
-      height: 50px;
-      width: 100%;
-      outline: none;
-      font-size: 1rem;
-      color: #707070;
-    }
-
-    h1 {
-      text-align: center;
-      margin-top: 30px;
-      color: white;
-    }
-
-    .form button {
-      height: 55px;
-      width: 100%;
-      color: #fff;
-      font-size: 1rem;
-      border: none;
-      margin-top: 30px;
-      cursor: pointer;
-      border-radius: 6px;
-      font-weight: 400px;
-      background-color: red;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="nav-bar">CineMAGIC!</div>
-
-  <h1>Film toevoegen</h1>
-
-  <section class="container">
-    <form action="#" class="form">
-      <div class="input-box">
-        <input type="text" placeholder="Titel:">
-      </div>
-
-      <div class="input-box">
-        <input type="text" placeholder="beschrijving:">
-      </div>
-
-      <div class="input-box">
-        <input type="text" placeholder="Korte beschrijving:">
-      </div>
-
-      <div class="input-box">
-        <input type="text" placeholder="Afbeelding:">
-      </div>
-
-      <div class="input-box">
-        <input type="text" placeholder="Genre:">
-      </div>
-
-      <div class="input-box">
-        <input type="text" placeholder="Rating:">
-      </div>
-
-      <div class="input-box">
-        <input type="text" placeholder="Taal:">
-      </div>
-
-      <div class="input-box">
-        <input type="text" placeholder="Filmduur:">
-      </div>
-
-      <button>Film toevoegen</button>
-    </form>
-  </section>
-</body>
-</html>
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>

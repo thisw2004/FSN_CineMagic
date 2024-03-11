@@ -1,3 +1,9 @@
+C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\CineMagicManagementPortal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\CineMagicManagementPortal.AssemblyInfoInputs.cache
+C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\CineMagicManagementPortal.AssemblyInfo.cs
+C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\CineMagicManagementPortal.csproj.CoreCompileInputs.cache
+C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\CineMagicManagementPortal.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\CineMagicManagementPortal.sourcelink.json
 C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\bin\Debug\net8.0\appsettings.json
 C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\bin\Debug\net8.0\CineMagicManagementPortal.staticwebassets.runtime.json
@@ -6,12 +12,6 @@ C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\bin\Debug\net8.0
 C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\bin\Debug\net8.0\CineMagicManagementPortal.runtimeconfig.json
 C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\bin\Debug\net8.0\CineMagicManagementPortal.dll
 C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\bin\Debug\net8.0\CineMagicManagementPortal.pdb
-C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\CineMagicManagementPortal.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\CineMagicManagementPortal.AssemblyInfoInputs.cache
-C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\CineMagicManagementPortal.AssemblyInfo.cs
-C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\CineMagicManagementPortal.csproj.CoreCompileInputs.cache
-C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\CineMagicManagementPortal.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\CineMagicManagementPortal.sourcelink.json
 C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\staticwebassets\msbuild.CineMagicManagementPortal.Microsoft.AspNetCore.StaticWebAssets.props
