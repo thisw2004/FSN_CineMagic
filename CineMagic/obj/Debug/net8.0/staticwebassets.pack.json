@@ -1,24 +1,32 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CineMagic.bundle.scp.css",
+      "Id": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagic\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CineMagic.bundle.scp.css",
       "PackagePath": "staticwebassets\\CineMagic.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\wwwroot\\app.css",
-      "PackagePath": "staticwebassets\\app.css"
-    },
-    {
-      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagic\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagic\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagic\\wwwroot\\css\\AddRooms.css",
+      "PackagePath": "staticwebassets\\css\\AddRooms.css"
+    },
+    {
+      "Id": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagic\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagic\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagic\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CineMagic.Microsoft.AspNetCore.StaticWebAssets.props",
