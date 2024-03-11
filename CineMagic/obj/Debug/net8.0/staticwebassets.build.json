@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2i8vpcYF9RjbQO/0GKF7j1S7xjcQt0bdRZc0WeHBvYM=",
+  "Hash": "SQt+qg136dtPYUSa8QCYEk8EIYIYYNUDH5iJzg0budg=",
   "Source": "CineMagic",
   "BasePath": "_content/CineMagic",
   "Mode": "Default",
@@ -8,19 +8,19 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "CineMagic\\wwwroot",
+      "Name": "CineMagic/wwwroot",
       "Source": "CineMagic",
-      "ContentRoot": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\wwwroot\\",
+      "ContentRoot": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/",
       "BasePath": "_content/CineMagic",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CineMagic.styles.css",
+      "Identity": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/obj/Debug/net8.0/scopedcss/bundle/CineMagic.styles.css",
       "SourceId": "CineMagic",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/obj/Debug/net8.0/scopedcss/bundle/",
       "BasePath": "_content/CineMagic",
       "RelativePath": "CineMagic.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CineMagic.styles.css"
+      "OriginalItemSpec": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/obj/Debug/net8.0/scopedcss/bundle/CineMagic.styles.css"
     },
     {
-      "Identity": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CineMagic.bundle.scp.css",
+      "Identity": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/obj/Debug/net8.0/scopedcss/projectbundle/CineMagic.bundle.scp.css",
       "SourceId": "CineMagic",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/obj/Debug/net8.0/scopedcss/projectbundle/",
       "BasePath": "_content/CineMagic",
       "RelativePath": "CineMagic.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CineMagic.bundle.scp.css"
+      "OriginalItemSpec": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/obj/Debug/net8.0/scopedcss/projectbundle/CineMagic.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\wwwroot\\app.css",
+      "Identity": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/app.css",
       "SourceId": "CineMagic",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\wwwroot\\",
+      "ContentRoot": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/",
       "BasePath": "_content/CineMagic",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -71,13 +71,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\app.css"
+      "OriginalItemSpec": "wwwroot/app.css"
     },
     {
-      "Identity": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/bootstrap/bootstrap.min.css",
       "SourceId": "CineMagic",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\wwwroot\\",
+      "ContentRoot": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/",
       "BasePath": "_content/CineMagic",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -90,13 +90,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
+      "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/bootstrap/bootstrap.min.css.map",
       "SourceId": "CineMagic",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\wwwroot\\",
+      "ContentRoot": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/",
       "BasePath": "_content/CineMagic",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -109,13 +109,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
+      "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\wwwroot\\favicon.png",
+      "Identity": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/favicon.png",
       "SourceId": "CineMagic",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagic\\wwwroot\\",
+      "ContentRoot": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/",
       "BasePath": "_content/CineMagic",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -128,7 +128,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.png"
+      "OriginalItemSpec": "wwwroot/favicon.png"
     }
   ]
 }
