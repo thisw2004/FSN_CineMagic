@@ -14,6 +14,11 @@ builder.Services.AddTransient<IMovieRepository, MovieRepository>();
 builder.Services.AddDbContext<Contexts.MovieContext>(options =>
     options.UseMySQL(builder.Configuration.GetConnectionString("default")));
 
+//
+builder.Services.AddTransient<Contexts.RoomMovieContext>();
+builder.Services.AddDbContext<Contexts.RoomMovieContext>(options =>
+    options.UseMySQL(builder.Configuration.GetConnectionString("default")));
+
 //Add all the necessary things for database connections for rooms
 
 builder.Services.AddTransient<Contexts.RoomContext>();

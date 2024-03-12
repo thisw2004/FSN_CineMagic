@@ -1,10 +1,16 @@
 using CineMagic.Components;
+using CineMagic.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddHttpClient<CineMagic.Services.MovieService>(client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5138/");
+});
 
 var app = builder.Build();
 

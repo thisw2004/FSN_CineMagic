@@ -17,5 +17,4 @@ public class Room
     public int amount_rows { get; set; }
 
     public int size { get; set; }
-
 }

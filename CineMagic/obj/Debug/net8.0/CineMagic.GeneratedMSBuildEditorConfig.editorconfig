@@ -22,20 +22,28 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9BcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/Components/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Db3VudGVyLnJhem9y
+[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/Components/Pages/AddRooms.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9BZGRSb29tcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/Components/Pages/Error.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9FcnJvci5yYXpvcg==
+[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/Components/Pages/AddShows.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9BZGRTaG93cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/Components/Pages/FilmDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9GaWxtRGV0YWlsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ib21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/Components/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9XZWF0aGVyLnJhem9y
+[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/Components/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9JbmRleC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/Components/Pages/Redirect.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9SZWRpcmVjdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/Components/Routes.razor]
@@ -53,3 +61,7 @@ build_metadata.AdditionalFiles.CssScope = b-kkknjmv39y
 [/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-o6206ijo4q
+
+[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/Components/Pages/AddFilms.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9BZGRGaWxtcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-26mdahtbot
