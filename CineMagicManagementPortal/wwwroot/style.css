@@ -1,0 +1,18 @@
+﻿/**{
+    margin:0px !important;
+    padding:0px !important;
+}*/
+
+.page{
+    background-color:black;
+    height:100vh;
+    
+}
+
+#nav{
+    background-color:orange;
+    height:110px !important;
+    width:100%;
+    position: fixed;
+    top: 0;
+}

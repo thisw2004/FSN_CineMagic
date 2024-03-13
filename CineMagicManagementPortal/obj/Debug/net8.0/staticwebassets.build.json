@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iTui+JaPDLv1tsIip8u6BuGwX37/b6DW1iCkT2u993c=",
+  "Hash": "4ovUjVWZfB+1XULOVtgmNoviyA7RAqvLkq1S3alU7JQ=",
   "Source": "CineMagicManagementPortal",
   "BasePath": "_content/CineMagicManagementPortal",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicManagementPortal\\wwwroot\\style.css",
+      "SourceId": "CineMagicManagementPortal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicManagementPortal\\wwwroot\\",
+      "BasePath": "_content/CineMagicManagementPortal",
+      "RelativePath": "style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\style.css"
     }
   ]
 }
