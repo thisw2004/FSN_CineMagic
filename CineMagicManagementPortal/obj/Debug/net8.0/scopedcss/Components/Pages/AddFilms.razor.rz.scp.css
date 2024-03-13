@@ -1,0 +1,51 @@
+/* AddFilms page styles */
+
+/* Use the colors from the provided image: orange for headers, black for background */
+.page-header[b-v0ca51tlv9] {
+    background-color: #FF961D; /* Adjust the color to match the exact orange shade */
+    color: white;
+}
+
+h1[b-v0ca51tlv9]{
+    background-color: red;
+    color: green;
+}
+
+.page-content[b-v0ca51tlv9] {
+    background-color: #000; /* Black background */
+    color: #707070; /* Grey text for readability */
+}
+
+.container[b-v0ca51tlv9] {
+    padding: 2rem;
+}
+
+/* Style the form elements */
+.form-label[b-v0ca51tlv9] {
+    color: #FF961D; /* Orange labels */
+}
+
+.form-control[b-v0ca51tlv9] {
+    background-color: #202020; /* Darker background for input fields */
+    border: 1px solid #FF961D; /* Orange border */
+    color: white; /* White text */
+}
+
+.form-select[b-v0ca51tlv9] {
+    background-color: #202020;
+    border: 1px solid #FF961D;
+    color: white;
+}
+
+/* Style the primary button */
+.btn-primary[b-v0ca51tlv9] {
+    background-color: #FF961D; /* Orange background */
+    border-color: #E67E00; /* Slightly darker border for the button */
+    color: black; /* Black text */
+}
+
+/* Button hover state */
+.btn-primary:hover[b-v0ca51tlv9] {
+    background-color: #E67E00; /* Darker orange on hover */
+    border-color: #CC6D00;
+}
