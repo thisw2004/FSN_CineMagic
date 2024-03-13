@@ -1,52 +1,53 @@
-﻿@page "/addfilms"
-<PageTitle>Add a new film</PageTitle>
-<h3>AddFilms</h3>
+﻿@page "/addFilms"
 
-<h1>TESTsdasdasdasdasdasdasd</h1>
-<div class="container mt-5">
-    <h2>Add New Movie</h2>
-    <form action="/server-endpoint" method="post" enctype="multipart/form-data">
-        <div class="mb-3">
-            <label for="movieTitle" class="form-label">Movie Title</label>
-            <input type="text" class="form-control" id="movieTitle" name="movieTitle" required>
-        </div>
-        <div class="mb-3">
-            <label for="shortDescription" class="form-label">Short Description</label>
-            <textarea class="form-control" id="shortDescription" name="shortDescription" rows="2" required></textarea>
-        </div>
-        <div class="mb-3">
-            <label for="description" class="form-label">Description</label>
-            <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
-        </div>
-        <div class="mb-3">
-            <label for="movieLength" class="form-label">Movie Length (in minutes)</label>
-            <input type="number" class="form-control" id="movieLength" name="movieLength" required>
-        </div>
-        <div class="mb-3">
-            <label for="language" class="form-label">Language</label>
-            <input type="text" class="form-control" id="language" name="language" required>
-        </div>
-        <div class="mb-3">
-            <label for="pegiRating" class="form-label">PEGI Rating</label>
-            <select class="form-select" id="pegiRating" name="pegiRating" required>
-                <option selected>Select rating</option>
-                <option value="3">3</option>
-                <option value="7">7</option>
-                <option value="12">12</option>
-                <option value="16">16</option>
-                <option value="18">18</option>
-            </select>
-        </div>
-        <div class="mb-3">
-            <label for="movieImages" class="form-label">Movie Images</label>
-            <input type="file" class="form-control" id="movieImages" name="movieImages" multiple>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+<div class="zaal-toevoegen">
+  <h1 class="text-center">Zaal toevoegen</h1>
+ <form @submit="VoegZaalToe" style="margin-top:50px !important; margin-left: 36%;">
+     <div class="form-group row">
+       <label for="zaalnummer" class="col-sm-2 col-form-label">Zaalnummer:</label>
+       <div class="col-sm-10">
+         <input type="number" style="background-color:black; border: none;" class="form-control" id="zaalnummer" @bind="Zaalnummer" placeholder="Enter Zaalnummer" required>
+         <hr style="color:#707070; width: 200px; margin-top:5px;" />
+       </div>
+     </div>
+     <div class="form-group row">
+       <label for="aantalZitplaatsen" class="col-sm-2 col-form-label">Aantal zitplaatsen:</label>
+       <div class="col-sm-10">
+         <input type="number" style="background-color:black; border: none;" class="form-control" id="aantalZitplaatsen" @bind="AantalZitplaatsen" placeholder="Enter Aantal Zitplaatsen" required>
+         <hr style="color:#707070; width: 200px; margin-top:5px;" />
+       </div>
+     </div>
+     <div class="form-group row">
+       <label for="aantalRijen" class="col-sm-2 col-form-label">Aantal rijen:</label>
+       <div class="col-sm-10">
+         <input type="number" style="background-color:black; border: none;" class="form-control" id="aantalRijen" @bind="AantalRijen" placeholder="Enter Aantal Rijen" required>
+         <hr style="color:#707070; width: 200px; margin-top:5px;" />
+       </div>
+     </div>
+     <div class="form-group row">
+       <label for="ruimte" class="col-sm-2 col-form-label">Ruimte:</label>
+       <div class="col-sm-10">
+         <input type="text" style="background-color:black; border: none;" class="form-control" id="ruimte" @bind="Ruimte" placeholder="Enter Ruimte Naam" required>
+         <hr style="color:#707070; width: 200px; margin-top:5px;" />
+       </div>
+     </div>
+     <button type="submit" style="background-color:#9f0202; border: none;" class="btn btn-primary">Zaal toevoegen</button>
+   </form>
+  
+ 
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 @code {
-    
-}
+    // Properties
+    private int? Zaalnummer { get; set; }
+    private int? AantalZitplaatsen { get; set; }
+    private int? AantalRijen { get; set; }
+    private string Ruimte { get; set; }
 
+    // Method to add a room
+    private void VoegZaalToe()
+    {
+        // Voeg hier de logica toe om de zaal toe te voegen
+        Console.WriteLine("Zaal toegevoegd!");
+    }
+}
