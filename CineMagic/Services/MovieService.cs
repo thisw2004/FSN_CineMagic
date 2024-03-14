@@ -16,4 +16,11 @@ public class MovieService
 
         return movies ?? new List<Movie>();
     }
+
+    
+    
+    // public async Task<HttpResponseMessage> AddMovie(Movie movie)
+    // {
+    //     return await _httpClient.PostAsJsonAsync("api/movies/add", movie);
+    // }
 }

@@ -11,11 +11,11 @@ public class RoomMovie
 
     [Required]
     public int RoomId { get; set; }
-    public Room Room { get; set; }
+    // public Room Room { get; set; }
     
     [Required]
     public int MovieId { get; set; }
-    public Movie Movie { get; set; }
+    // public Movie Movie { get; set; }
 
     [Required] 
     public DateTime DateTime { get; set; }

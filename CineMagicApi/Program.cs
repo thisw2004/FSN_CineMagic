@@ -1,5 +1,6 @@
 using CineMagicData.Models;
 using CineMagicData.Repositories;
+using CineMagicData.Repositories.Show;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +17,7 @@ builder.Services.AddDbContext<Contexts.MovieContext>(options =>
 
 //
 builder.Services.AddTransient<Contexts.RoomMovieContext>();
+builder.Services.AddTransient<IShowRepistory, ShowRepistory>();
 builder.Services.AddDbContext<Contexts.RoomMovieContext>(options =>
     options.UseMySQL(builder.Configuration.GetConnectionString("default")));
 
