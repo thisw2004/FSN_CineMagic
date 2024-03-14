@@ -7,7 +7,7 @@ namespace CineMagicData.Models;
 public class Room
 {
     [Required]
-    public int Id { get; set; }
+    public int Id { get; }
     
     [Required]
     public int room_number { get; set; }
@@ -17,5 +17,7 @@ public class Room
     public int amount_rows { get; set; }
 
     public int size { get; set; }
+    
+    public ICollection<Seat> Seats { get; set; }
 
 }

@@ -3342,8 +3342,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicData/CineMagicData.csproj": {
-              "projectPath": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicData/CineMagicData.csproj"
+            "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicData\\CineMagicData.csproj": {
+              "projectPath": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicData\\CineMagicData.csproj"
             }
           }
         }
