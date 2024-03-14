@@ -1,0 +1,72 @@
+﻿<!-- ZaalToevoegen.razor -->
+@page "/zaaltoevoegen"
+
+<div style="background-color: black; color: grey;">
+    <div style="background-color: #ff961d; height: 20vh; width: 100%;">
+        <!-- TODO: Voeg het logo hier toe -->
+    </div>
+    <div style="text-align: center; margin-top: 30px">
+        <div style="margin-top: 10px;">
+            <span style="font-size: 40px;">Zaal toevoegen</span>
+        </div>
+        <div style="margin-top: 10px;">
+            <input @bind="Zaalnummer" style="
+                background-color: black;
+                color: grey;
+                border-bottom-color: grey;
+                border-right: 0;
+                width: 10%;
+                height: 30px;" placeholder="Zaalnummer" type="number">
+        </div>
+        <div style="margin-top: 10px;">
+            <input @bind="AantalZitplaatsen" style="
+                background-color: black;
+                color: grey;
+                border-bottom-color: grey;
+                border-right: 0;
+                width: 10%;
+                height: 30px;" placeholder="Aantal zitplaatsen" type="number">
+        </div>
+        <div style="margin-top: 10px;">
+            <input @bind="AantalRijen" style="
+                background-color: black;
+                color: grey;
+                border-bottom-color: grey;
+                border-right: 0;
+                width: 10%;
+                height: 30px;" placeholder="Aantal rijen" type="number">
+        </div>
+        <div style="margin-top: 10px;">
+            <input @bind="Ruimte" style="
+                background-color: black;
+                color: grey;
+                border-bottom-color: grey;
+                border-right: 0;
+                width: 10%;
+                height: 30px;" placeholder="Ruimte">
+        </div>
+        <div style="margin-top: 20px;">
+            <button style="
+                background-color: darkred;
+                color:white;
+                border-radius: 20px;
+                height: 30px;
+                width: 150px;" @onclick="VoegZaalToe">Zaal toevoegen</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    // Properties
+    private int Zaalnummer { get; set; }
+    private int AantalZitplaatsen { get; set; }
+    private int AantalRijen { get; set; }
+    private string Ruimte { get; set; }
+
+    // Method to add a room
+    private void VoegZaalToe()
+    {
+        // Voeg hier de logica toe om de zaal toe te voegen
+        Console.WriteLine("Zaal toegevoegd!");
+    }
+}
