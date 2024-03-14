@@ -1,0 +1,54 @@
+@page "/Addroom"
+@rendermode InteractiveServer
+@using CineMagicData.Models
+@using CineMagic.Services
+@inject RoomService RoomService
+@inject NavigationManager NavigationManager
+
+<PageTitle>Add a new room</PageTitle>
+
+<h3>AddRoom</h3>
+<p>@error</p>
+
+
+<div>
+    <form action="" @onsubmit="HandleSubmit">
+        <div class="mb-3">
+            <label for="roomNumber" class="form-label">Room Number</label>
+            <input type="text" @bind="NewRoom.room_number" class="form-control" id="roomNumber" name="roomNumber" required>
+        </div>
+        <div class="mb-3">
+            <label for="amountOfSeats" class="form-label">Amount of Seats</label>
+            <input type="number" @bind="NewRoom.amount_seats" class="form-control" id="amountOfSeats" name="amountOfSeats" required>
+        </div>
+        <div class="mb-3">
+            <label for="amountOfRows" class="form-label">Amount of Rows</label>
+            <input type="number" @bind="NewRoom.amount_rows" class="form-control" id="amountOfRows" name="amountOfRows" required>
+        </div>
+        <div class="mb-3">
+            <label for="size" class="form-label">Size (in square meters)</label>
+            <input type="text" @bind="NewRoom.size" class="form-control" id="size" name="size" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+@code {
+    
+    private Room NewRoom{ get; set; } = new Room();
+    private string error = "";
+
+    private async Task HandleSubmit()
+    {
+
+        var result = await RoomService.AddRoom(NewRoom);
+
+        if (result.IsSuccessStatusCode)
+        {
+            NavigationManager.NavigateTo("/");
+        }
+
+        error = result.ToString();
+    }
+}

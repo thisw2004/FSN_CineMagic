@@ -1,0 +1,82 @@
+@page "/AddMovies"
+@rendermode InteractiveServer
+@using CineMagic.Services
+@using CineMagicData.Models
+@inject MovieService MovieService
+@inject NavigationManager NavigationManager
+
+<PageTitle>Add movie</PageTitle>
+
+<h2>Add New Movie</h2>
+<div>
+    <form @onsubmit="HandleSubmit">
+        <div class="mb-3">
+            <label for="movieTitle" class="form-label">Movie Title</label>
+            <input @bind="NewMovie.Title" type="text" class="form-control" id="movieTitle" name="movieTitle" required>
+        </div>
+        <div class="mb-3">
+            <label for="shortDescription" class="form-label">Short Description</label>
+            <textarea @bind="NewMovie.ShortDescription" class="form-control" id="shortDescription" name="shortDescription" rows="2" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea @bind="NewMovie.Description" class="form-control" id="description" name="description" rows="4" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Genre</label>
+            <input @bind="NewMovie.Genre" type="text" class="form-control" id="genre" name="genre" required>
+        </div>
+        <div class="mb-3">
+            <label for="movieLength" class="form-label">Movie Length (in minutes)</label>
+            <input @bind="NewMovie.Length" type="number" class="form-control" id="movieLength" name="movieLength" required>
+        </div>
+        <div class="mb-3">
+            <label for="language" class="form-label">Language</label>
+            <input @bind="NewMovie.Language" type="text" class="form-control" id="language" name="language" required>
+        </div>
+        <div class="mb-3">
+            <label for="pegiRating" class="form-label">PEGI Rating</label>
+            <select @bind="NewMovie.PegiRating" class="form-select" id="pegiRating" name="pegiRating" required>
+                <option selected>Select rating</option>
+                <option value="3">3</option>
+                <option value="7">7</option>
+                <option value="12">12</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="movieImages" class="form-label">Movie Images</label>
+            <input type="text" @bind="NewMovie.Image" class="form-control" id="movieImages" name="movieImages" >
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+@code {
+    private int currentCount = 0;
+    private string error = "";
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+    
+    private Movie NewMovie { get; set; } = new Movie();
+    
+    private async Task HandleSubmit()
+    {
+        currentCount++;
+
+        var result = await MovieService.AddMovie(NewMovie);
+
+        if (result.IsSuccessStatusCode)
+        {
+            NavigationManager.NavigateTo("/");
+        }
+
+        error = result.ToString();
+    }
+
+}

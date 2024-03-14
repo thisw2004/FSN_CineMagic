@@ -1,34 +1,47 @@
 ﻿@page "/addfilms"
+@using CineMagic.Services
+@using CineMagicData.Models
+@rendermode InteractiveServer
+@inject MovieService MovieService
+@inject NavigationManager NavigationManager
+
+
+
 <PageTitle>Add a new film</PageTitle>
 <h3>AddFilms</h3>
 
 <h1>TESTsdasdasdasdasdasdasd</h1>
 <div class="container mt-5">
     <h2>Add New Movie</h2>
-    <form action="/server-endpoint" method="post" enctype="multipart/form-data">
+   
+    <form  @onsubmit:prevent>
         <div class="mb-3">
             <label for="movieTitle" class="form-label">Movie Title</label>
-            <input type="text" class="form-control" id="movieTitle" name="movieTitle" required>
+            <input @bind="NewMovie.Title" type="text" class="form-control" id="movieTitle" name="movieTitle" required>
         </div>
         <div class="mb-3">
             <label for="shortDescription" class="form-label">Short Description</label>
-            <textarea class="form-control" id="shortDescription" name="shortDescription" rows="2" required></textarea>
+            <textarea @bind="NewMovie.ShortDescription" class="form-control" id="shortDescription" name="shortDescription" rows="2" required></textarea>
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>
-            <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
+            <textarea @bind="NewMovie.Description" class="form-control" id="description" name="description" rows="4" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Genre</label>
+            <input @bind="NewMovie.Genre" type="text" class="form-control" id="genre" name="genre" required>
         </div>
         <div class="mb-3">
             <label for="movieLength" class="form-label">Movie Length (in minutes)</label>
-            <input type="number" class="form-control" id="movieLength" name="movieLength" required>
+            <input @bind="NewMovie.Length" type="number" class="form-control" id="movieLength" name="movieLength" required>
         </div>
         <div class="mb-3">
             <label for="language" class="form-label">Language</label>
-            <input type="text" class="form-control" id="language" name="language" required>
+            <input @bind="NewMovie.Language" type="text" class="form-control" id="language" name="language" required>
         </div>
         <div class="mb-3">
             <label for="pegiRating" class="form-label">PEGI Rating</label>
-            <select class="form-select" id="pegiRating" name="pegiRating" required>
+            <select @bind="NewMovie.PegiRating" class="form-select" id="pegiRating" name="pegiRating" required>
                 <option selected>Select rating</option>
                 <option value="3">3</option>
                 <option value="7">7</option>
@@ -37,16 +50,35 @@
                 <option value="18">18</option>
             </select>
         </div>
-        <div class="mb-3">
-            <label for="movieImages" class="form-label">Movie Images</label>
-            <input type="file" class="form-control" id="movieImages" name="movieImages" multiple>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        @* <div class="mb-3"> *@
+        @*     <label for="movieImages" class="form-label">Movie Images</label> *@
+        @*     <input type="file" class="form-control" id="movieImages" name="movieImages" multiple> *@
+        @* </div> *@
+        @* <button type="button" @onclick="" class="btn btn-primary">Submit</button> *@
     </form>
+    <button @onclick="TestButtonClick">Click me</button>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+@* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> *@
 
 @code {
-    
+    private Movie NewMovie { get; set; } = new Movie();
+
+    private string returned;
+
+    private void TestButtonClick()
+    {
+        Console.WriteLine("Button clicked!");
+    }
+    //
+    // private async Task HandleSubmit()
+    // {
+    //     Console.WriteLine($"Nieuwe film??!?!??!, {NewMovie.Title}");
+    //     var result = await MovieService.AddMovie(NewMovie);
+    //
+    //     if (result.IsSuccessStatusCode)
+    //     {
+    //         NavigationManager.NavigateTo("/home");
+    //     }
+    // }
 }
 

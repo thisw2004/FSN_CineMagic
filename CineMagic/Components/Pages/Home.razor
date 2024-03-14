@@ -1,5 +1,8 @@
 ﻿<!-- FilmListings.razor -->
 @page "/home"
+@using CineMagicData.Models
+@using CineMagic.Services
+@inject CineMagic.Services.MovieService MovieService
 
 <div class="filter-sidebar">
     <!-- Filter options go here -->
@@ -10,18 +13,18 @@
 
 <section class="film-listing">
     <!-- Demo film card -->
-    @foreach (var film in Films)
+    @foreach (var movie in _movies)
     {
         <div class="film-card">
             <img src="https://via.placeholder.com/200" alt="Demo Film Image">
             <div class="film-info">
-                <h3>@film.Title</h3>
-                <p>@film.Description</p>
+                <h3>@movie.Title</h3>
+                <p>@movie.Description</p>
             </div>
-            <button class="expand-details" @onclick="() => ToggleDetails(film)">+</button>
-            <div class="additional-details" style="@film.DetailsStyle">
-                <p>Director: @film.Director</p>
-                <p>Cast: @film.Cast</p>
+            <button class="expand-details" @onclick="() => ToggleDetails(movie)">+</button>
+            <div class="additional-details" style="">
+                <p>Director: </p>
+                <p>Cast: </p>
             </div>
         </div>
     }
@@ -30,30 +33,39 @@
 
 @code {
     // Define a class for the film
-    public class Film
+    // public class Film
+    // {
+    //     public string Title { get; set; }
+    //     public string Description { get; set; }
+    //     public string Director { get; set; }
+    //     public string Cast { get; set; }
+    //     public bool IsExpanded { get; set; }
+    //     public string DetailsStyle => IsExpanded ? "display: block;" : "display: none;";
+    // }
+    //
+    // // Define some sample films
+    // List<Film> Films = new List<Film>
+    // {
+    //     new Film { Title = "Film Title 1", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" },
+    //     new Film { Title = "Film Title 2", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" },
+    //     new Film { Title = "Film Title 3", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" },
+    //     new Film { Title = "Film Title 4", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" },
+    //     new Film { Title = "Film Title 5", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" },
+    //     new Film { Title = "Film Title 6", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" }
+    // };
+
+
+
+    List<Movie> _movies = new List<Movie>();
+
+    protected override async Task OnInitializedAsync()
     {
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public string Director { get; set; }
-        public string Cast { get; set; }
-        public bool IsExpanded { get; set; }
-        public string DetailsStyle => IsExpanded ? "display: block;" : "display: none;";
+        _movies = (await MovieService.GetAllMovies()).ToList();
     }
 
-    // Define some sample films
-    List<Film> Films = new List<Film>
-    {
-        new Film { Title = "Film Title 1", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" },
-        new Film { Title = "Film Title 2", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" },
-        new Film { Title = "Film Title 3", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" },
-        new Film { Title = "Film Title 4", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" },
-        new Film { Title = "Film Title 5", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" },
-        new Film { Title = "Film Title 6", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" }
-    };
-
     // Method to toggle the details visibility
-    void ToggleDetails(Film film)
+    void ToggleDetails(Movie movie)
     {
-        film.IsExpanded = !film.IsExpanded;
+        // movie.IsExpanded = !movie.IsExpanded;
     }
 }
