@@ -15,4 +15,10 @@ public class RoomService
     {
         return await _httpClient.PostAsJsonAsync("api/rooms/add", room);
     }
+
+    public async Task<IEnumerable<Room>> GetAllRooms()
+    {
+        var rooms = await _httpClient.GetFromJsonAsync<IEnumerable<Room>>("api/rooms/all");
+
+        return rooms ?? new List<Room>();    }
 }

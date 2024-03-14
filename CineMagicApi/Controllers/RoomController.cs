@@ -56,5 +56,22 @@ public class RoomController : ControllerBase
                 new { StatusCode = "500", message = ex.Message });
         }
     }
+
+    [HttpGet("all")]
+    public async Task<IActionResult> GetAllRooms()
+    {
+        try
+        {
+            var rooms = await _roomRepo.GetRoomsAsync();
+            return Ok(rooms);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.Message);
+            return StatusCode(StatusCodes.Status500InternalServerError,
+                new { StatusCode = "500", message = ex.Message });
+        }
+        
+    }
     
 }

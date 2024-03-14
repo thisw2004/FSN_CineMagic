@@ -13,6 +13,6 @@ public class ShowService
 
     public async Task<HttpResponseMessage> AddShow(RoomMovie show)
     {
-        return await _httpClient.PostAsJsonAsync("api/rooms/add", show);
+        return await _httpClient.PostAsJsonAsync("api/shows/add", show);
     }
 }
