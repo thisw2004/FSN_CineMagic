@@ -3,6 +3,8 @@
 @using CineMagicData.Models
 @using CineMagic.Services
 @inject ShowService ShowService
+@inject MovieService MovieService
+@inject RoomService RoomService
 @inject NavigationManager NavigationManager
 
 <h3>AddShow</h3>
@@ -13,8 +15,11 @@
             <label for="roomNumber" class="form-label">Room Number</label>
             <select @bind="Show.RoomId" class="form-control" id="roomNumber">
                 @* Populate this list with actual room numbers from your database or a predefined list *@
-                <option value="1">Room 1</option>
-                <option value="2">Room 2</option>
+                @foreach (var room in _rooms)
+                {
+                    <option value="@room.Id">@room.room_number</option>
+                }
+                
                 <!-- More room options -->
             </select>
         </div>
@@ -22,8 +27,10 @@
             <label for="filmTitle" class="form-label">Film Title</label>
             <select @bind="Show.MovieId" class="form-control" id="filmTitle">
                 @* Populate this list with actual film titles from your database or a predefined list *@
-                <option value="1">Movie 1</option>
-                <option value="2">Movie 2</option>
+                @foreach (var movie in _movies)
+                {
+                    <option value="@movie.Id" >@movie.Title</option>
+                }
                 <!-- More film options -->
             </select>
         </div>
@@ -37,7 +44,17 @@
 
 @code {
     private RoomMovie Show { get; set; } = new RoomMovie();
+    List<Movie> _movies = new List<Movie>();
+    List<Room> _rooms = new List<Room>();
+
     private string error = "";
+    
+    
+    protected override async Task OnInitializedAsync()
+    {
+        _movies = (await MovieService.GetAllMovies()).ToList();
+        _rooms = (await RoomService.GetAllRooms()).ToList();
+    }
     
     private async Task HandleSubmit()
     {
