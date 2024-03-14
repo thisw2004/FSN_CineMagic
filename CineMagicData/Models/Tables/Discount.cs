@@ -11,8 +11,8 @@ public class Discounts
     public int DiscountId { get; set; }
     
     [Required]
-    public string Name { get; set; }
+    public string?  Name { get; set; }
 
     [Required]
-    public double Amount { get; set; }
+    public double ? Amount { get; set; }
 }

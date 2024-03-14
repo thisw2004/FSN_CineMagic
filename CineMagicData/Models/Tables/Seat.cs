@@ -8,13 +8,13 @@ using System.ComponentModel.DataAnnotations;
 public class Seat
 {
     [Required]
-    public int SeatId { get; set; }
+    public int? SeatId { get; set; }
     
     [Required]
-    public string SeatNumber { get; set; }
+    public string? SeatNumber { get; set; }
 
-    public int RowNumber { get; set; }
+    public int? RowNumber { get; set; }
     
     [ForeignKey("RoomId")]
-    public int RoomId { get; set; }
+    public int? RoomId { get; set; }
 }

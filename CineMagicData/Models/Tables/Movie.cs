@@ -11,19 +11,19 @@ public class Movie
     public int Id { get; set; }
     
     [Required]
-    public string Title { get; set; }
-
-    public string Description { get; set; }
-
-    public string ShortDescription { get; set; }
-
-    public string Image { get; set; }
-
-    public string PegiRating { get; set; }
-
-    public string Genre { get; set; }
-
-    public int Length { get; set; }
-    
-    public string Language { get; set; }
+    public string? Title { get; set; }
+    [Required]
+    public string? Description { get; set; }
+    [Required]
+    public string? ShortDescription { get; set; }
+    [Required]
+    public string? Image { get; set; }
+    [Required]
+    public string? PegiRating { get; set; }
+    [Required]
+    public string? Genre { get; set; }
+    [Required]
+    public int? Length { get; set; }
+    [Required]
+    public string? Language { get; set; }
 }

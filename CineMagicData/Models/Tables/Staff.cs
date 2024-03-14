@@ -11,13 +11,13 @@ public class Staff
     public int StaffId { get; set; }
     
     [Required]
-    public string Username { get; set; }
+    public string? Username { get; set; }
 
     [Required]
-    public string Password { get; set; }
+    public string? Password { get; set; }
     
     [Required]
-    public string FullName { get; set; }
+    public string? FullName { get; set; }
 
-    public DateTime DateOfBirth { get; set; }
+    public DateTime? DateOfBirth { get; set; }
 }

@@ -10,10 +10,10 @@ public class Order
     [Required]
     public int OrderId { get; set; }
     
-    public DateTime Date { get; set; }
+    public DateTime? Date { get; set; }
 
-    public double TotalAmount { get; set; }
+    public double? TotalAmount { get; set; }
     
     [Required]
-    public string Status { get; set; }
+    public string? Status { get; set; }
 }

@@ -10,13 +10,13 @@ public class Room
     public int Id { get; }
     
     [Required]
-    public int room_number { get; set; }
+    public int? room_number { get; set; }
 
-    public int amount_seats { get; set; }
+    public int? amount_seats { get; set; }
 
-    public int amount_rows { get; set; }
+    public int? amount_rows { get; set; }
 
-    public int size { get; set; }
+    public int? size { get; set; }
     
     public ICollection<Seat> Seats { get; set; }
 
