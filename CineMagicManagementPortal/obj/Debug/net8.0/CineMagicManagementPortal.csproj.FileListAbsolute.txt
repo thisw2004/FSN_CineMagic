@@ -28,4 +28,3 @@ C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\obj\Debug\net8.0
 C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\CineMagicManagementPortal.pdb
 C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\CineMagicManagementPortal.genruntimeconfig.cache
 C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\ref\CineMagicManagementPortal.dll
-C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\scopedcss\Components\Pages\AddFilms.razor.rz.scp.css
