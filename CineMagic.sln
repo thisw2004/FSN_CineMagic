@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineMagicData", "CineMagicD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineMagicManagementPortal", "CineMagicManagementPortal\CineMagicManagementPortal.csproj", "{25949012-808C-46A1-93FA-E0C467273E05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineMagicClient", "CineMagicClient\CineMagicClient.csproj", "{6D52BA7F-8CAD-416F-9F0E-28B86F465C2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{25949012-808C-46A1-93FA-E0C467273E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25949012-808C-46A1-93FA-E0C467273E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25949012-808C-46A1-93FA-E0C467273E05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D52BA7F-8CAD-416F-9F0E-28B86F465C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D52BA7F-8CAD-416F-9F0E-28B86F465C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D52BA7F-8CAD-416F-9F0E-28B86F465C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D52BA7F-8CAD-416F-9F0E-28B86F465C2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

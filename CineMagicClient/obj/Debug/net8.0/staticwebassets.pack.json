@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicClient\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CineMagicClient.bundle.scp.css",
+      "PackagePath": "staticwebassets\\CineMagicClient.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicClient\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicClient\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicClient\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicClient\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CineMagicClient.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CineMagicClient.props",
+      "PackagePath": "build\\CineMagicClient.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CineMagicClient.props",
+      "PackagePath": "buildMultiTargeting\\CineMagicClient.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CineMagicClient.props",
+      "PackagePath": "buildTransitive\\CineMagicClient.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
