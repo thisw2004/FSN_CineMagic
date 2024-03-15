@@ -41,4 +41,9 @@ public class MovieService
     {
         return await _httpClient.PostAsJsonAsync("api/movies/add", movie);
     }
+    
+    public async Task<Movie> GetMovieById(int movieId)
+    {
+        return await _httpClient.GetFromJsonAsync<Movie>($"api/movies/movie/{movieId}");
+    }
 }

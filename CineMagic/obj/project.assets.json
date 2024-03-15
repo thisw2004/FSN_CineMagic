@@ -2853,21 +2853,21 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "CineMagicData >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\Joey1\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet": {}
+    "/Users/jorikvanmaaren/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagic\\CineMagic.csproj",
+      "projectUniqueName": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/CineMagic.csproj",
       "projectName": "CineMagic",
-      "projectPath": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagic\\CineMagic.csproj",
-      "packagesPath": "C:\\Users\\Joey1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagic\\obj\\",
+      "projectPath": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/CineMagic.csproj",
+      "packagesPath": "/Users/jorikvanmaaren/.nuget/packages/",
+      "outputPath": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/jorikvanmaaren/.nuget/NuGet/NuGet.Config"

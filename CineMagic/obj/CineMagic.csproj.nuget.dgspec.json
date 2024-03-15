@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagic\\CineMagic.csproj": {}
+    "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/CineMagic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagic\\CineMagic.csproj": {
+    "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/CineMagic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagic\\CineMagic.csproj",
+        "projectUniqueName": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/CineMagic.csproj",
         "projectName": "CineMagic",
-        "projectPath": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagic\\CineMagic.csproj",
-        "packagesPath": "C:\\Users\\Joey1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagic\\obj\\",
+        "projectPath": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/CineMagic.csproj",
+        "packagesPath": "/Users/jorikvanmaaren/.nuget/packages/",
+        "outputPath": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/jorikvanmaaren/.nuget/NuGet/NuGet.Config"
