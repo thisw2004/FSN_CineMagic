@@ -1,0 +1,55 @@
+﻿
+
+@page "/zaaltoevoegen"
+<PageTitle>NL - CineMagic Managementportaal - Zaal toevoegen</PageTitle>
+<div class="zaal-toevoegen">
+  <h1 class="text-center" >Zaal toevoegen</h1>
+ <form @submit="VoegZaalToe" style="margin-top:50px !important; margin-left: 36%;">
+     <div class="form-group row">
+       <label for="zaalnummer" class="col-sm-2 col-form-label">Zaalnummer:</label>
+       <div class="col-sm-10">
+         <input type="number" style="background-color:black; border: none;" class="form-control" id="zaalnummer" @bind="Zaalnummer" placeholder="Vul Zaalnummer in" required>
+         <hr style="color:#707070; width: 200px; margin-top:5px;" />
+       </div>
+     </div>
+     <div class="form-group row">
+       <label for="aantalZitplaatsen" class="col-sm-2 col-form-label">Aantal zitplaatsen:</label>
+       <div class="col-sm-10">
+         <input type="number" style="background-color:black; border: none;" class="form-control" id="aantalZitplaatsen" @bind="AantalZitplaatsen" placeholder="Vul Aantal Zitplaatsen in" required>
+         <hr style="color:#707070; width: 200px; margin-top:5px;" />
+       </div>
+     </div>
+     <div class="form-group row">
+       <label for="aantalRijen" class="col-sm-2 col-form-label">Aantal rijen:</label>
+       <div class="col-sm-10">
+         <input type="number" style="background-color:black; border: none;" class="form-control" id="aantalRijen" @bind="AantalRijen" placeholder="Vul Aantal Rijen in" required>
+         <hr style="color:#707070; width: 200px; margin-top:5px;" />
+       </div>
+     </div>
+     <div class="form-group row">
+       <label for="ruimte" class="col-sm-2 col-form-label">Ruimte:</label>
+       <div class="col-sm-10">
+         <input type="text" style="background-color:black; border: none;" class="form-control" id="ruimte" @bind="Ruimte" placeholder="Vul Ruimte Naam in" required>
+         <hr style="color:#707070; width: 200px; margin-top:5px;" />
+       </div>
+     </div>
+     <button type="submit" style="background-color:#9f0202; border: none;" class="btn btn-primary">Zaal toevoegen</button>
+   </form>
+  
+ 
+</div>
+
+@code {
+    // Properties
+    private int? Zaalnummer { get; set; }
+    private int? AantalZitplaatsen { get; set; }
+    private int? AantalRijen { get; set; }
+    private string Ruimte { get; set; }
+
+    // Method to add a room
+    private void VoegZaalToe()
+    {
+        // Voeg hier de logica toe om de zaal toe te voegen
+        Console.WriteLine("Zaal toegevoegd!");
+    }
+}
