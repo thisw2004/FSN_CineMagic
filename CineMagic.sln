@@ -9,9 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineMagicApi", "CineMagicAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineMagicData", "CineMagicData\CineMagicData.csproj", "{92B88B3C-0B6A-4A35-9D59-FAF914804678}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineMagicBlazor", "CineMagicBlazor\CineMagicBlazor.csproj", "{88406E70-85C0-4E67-8807-FA794FACA37D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineMagicManagementPortal", "CineMagicManagementPortal\CineMagicManagementPortal.csproj", "{25949012-808C-46A1-93FA-E0C467273E05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineMagicManagementPortal", "CineMagicManagementPortal\CineMagicManagementPortal.csproj", "{FE6E5CD5-04F9-42D0-AD4E-79EF8C34592C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineMagicClient", "CineMagicClient\CineMagicClient.csproj", "{6D52BA7F-8CAD-416F-9F0E-28B86F465C2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CineMagicBlazor", "CineMagicBlazor\CineMagicBlazor.csproj", "{EC0D97CD-F67D-48E5-9252-20C27D774247}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +33,18 @@ Global
 		{92B88B3C-0B6A-4A35-9D59-FAF914804678}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92B88B3C-0B6A-4A35-9D59-FAF914804678}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92B88B3C-0B6A-4A35-9D59-FAF914804678}.Release|Any CPU.Build.0 = Release|Any CPU
-		{88406E70-85C0-4E67-8807-FA794FACA37D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{88406E70-85C0-4E67-8807-FA794FACA37D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{88406E70-85C0-4E67-8807-FA794FACA37D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{88406E70-85C0-4E67-8807-FA794FACA37D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FE6E5CD5-04F9-42D0-AD4E-79EF8C34592C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FE6E5CD5-04F9-42D0-AD4E-79EF8C34592C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FE6E5CD5-04F9-42D0-AD4E-79EF8C34592C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FE6E5CD5-04F9-42D0-AD4E-79EF8C34592C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25949012-808C-46A1-93FA-E0C467273E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25949012-808C-46A1-93FA-E0C467273E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25949012-808C-46A1-93FA-E0C467273E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25949012-808C-46A1-93FA-E0C467273E05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D52BA7F-8CAD-416F-9F0E-28B86F465C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D52BA7F-8CAD-416F-9F0E-28B86F465C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D52BA7F-8CAD-416F-9F0E-28B86F465C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D52BA7F-8CAD-416F-9F0E-28B86F465C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC0D97CD-F67D-48E5-9252-20C27D774247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC0D97CD-F67D-48E5-9252-20C27D774247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC0D97CD-F67D-48E5-9252-20C27D774247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC0D97CD-F67D-48E5-9252-20C27D774247}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
