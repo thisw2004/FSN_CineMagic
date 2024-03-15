@@ -1,14 +1,25 @@
 ﻿
 @page "/addMovie"
+
+@*uses*@
+@rendermode InteractiveServer
+@using CineMagic.Services
+@using CineMagicData.Models
+@inject MovieService MovieService
+@inject NavigationManager NavigationManager
+
+
 <PageTitle>Eng - Add movie</PageTitle>
+
 <div class="zaal-toevoegen" id="addMovieDiv">
   <h1 class="text-center">Add movie</h1>
- <form @submit="addFilm" style="margin-top:50px !important; margin-left: 36%;">
+  <p>@error</p>
+ <form @onsubmit="HandleSubmit" style="margin-top:50px !important; margin-left: 36%;">
     
      <div class="form-group row">
            <label for="titel" class="col-sm-2 col-form-label">Title:</label>
            <div class="col-sm-10">
-             <input type="text" style="background-color: black; border: none;" class="form-control" id="titel"  placeholder="Enter title" required>
+             <input @bind="NewMovie.Title" type="text" style="background-color: black; border: none;" class="form-control" id="titel"  placeholder="Enter title" required>
              <hr style="color:#707070; width: 200px; margin-top:5px;" />
            </div>
          </div>
@@ -16,7 +27,7 @@
          <div class="form-group row">
            <label for="beschrijving" class="col-sm-2 col-form-label">Description:</label>
            <div class="col-sm-10">
-             <textarea type="text" style="background-color: black; border: none; resize: none;" class="form-control" id="beschrijving" placeholder="Enter description" required rows="4"></textarea>
+             <textarea  type="text" @bind="NewMovie.Description" style="background-color: black; border: none; resize: none;" class="form-control" id="beschrijving" placeholder="Enter description" required rows="4"></textarea>
              <hr style="color:#707070; width: 200px; margin-top:5px;" />
            </div>
          </div>
@@ -24,7 +35,7 @@
          <div class="form-group row">
            <label for="korteBeschrijving" class="col-sm-2 col-form-label">Short Description:</label>
            <div class="col-sm-10">
-             <textarea type="text" style="background-color: black; border: none; resize: none;" class="form-control" id="korteBeschrijving"  placeholder="Enter short description" required rows="2"></textarea>
+             <textarea  @bind="NewMovie.ShortDescription" type="text" style="background-color: black; border: none; resize: none;" class="form-control" id="korteBeschrijving"  placeholder="Enter short description" required rows="2"></textarea>
              <hr style="color:#707070; width: 200px; margin-top:5px;" />
            </div>
          </div>
@@ -32,7 +43,7 @@
          <div class="form-group row">
            <label for="afbeelding" class="col-sm-2 col-form-label">Image:</label>
            <div class="col-sm-10">
-             <input type="image" style="background-color: black; border: none;" class="form-control" id="afbeelding"  placeholder="Enter image URL" required alt="img">
+             <input type="image" @bind="NewMovie.Image" style="background-color: black; border: none;" class="form-control" id="afbeelding"  placeholder="Enter image URL" required alt="img">
              <hr style="color:#707070; width: 200px; margin-top:5px;" />
            </div>
          </div>
@@ -40,7 +51,7 @@
          <div class="form-group row">
            <label for="genre" class="col-sm-2 col-form-label">Genre:</label>
            <div class="col-sm-10">
-             <input type="text" style="background-color: black; border: none;" class="form-control" id="genre"  placeholder="Enter Genre" required>
+             <input type="text" @bind="NewMovie.Genre" style="background-color: black; border: none;" class="form-control" id="genre"  placeholder="Enter Genre" required>
              <hr style="color:#707070; width: 200px; margin-top:5px;" />
            </div>
          </div>
@@ -48,7 +59,14 @@
          <div class="form-group row">
            <label for="rating" class="col-sm-2 col-form-label">Rating:</label>
            <div class="col-sm-10">
-             <input type="number" style="background-color: black; border: none;" class="form-control" id="rating"  placeholder="Enter Rating" required>
+             <select type="number" @bind="NewMovie.PegiRating" style="background-color: black; border: none;" class="form-control" id="rating"  placeholder="Enter Rating" required>
+                <option selected disabled="disabled">Select rating</option>
+                <option value="3">3</option>
+                <option value="7">7</option>
+                <option value="12">12</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+             </select>  
              <hr style="color:#707070; width: 200px; margin-top:5px;" />
            </div>
          </div>
@@ -56,7 +74,7 @@
          <div class="form-group row">
            <label for="language" class="col-sm-2 col-form-label">Language:</label>
            <div class="col-sm-10">
-             <input type="number" style="background-color: black; border: none;" class="form-control" id="language"  placeholder="Enter language" required>
+             <input type="number" @bind="NewMovie.Language" style="background-color: black; border: none;" class="form-control" id="language"  placeholder="Enter language" required>
              <hr style="color:#707070; width: 200px; margin-top:5px;" />
            </div>
          </div>
@@ -64,7 +82,7 @@
          <div class="form-group row">
            <label for="filmduur" class="col-sm-2 col-form-label">Movie duration:</label>
            <div class="col-sm-10">
-             <input type="number" style="background-color: black; border: none;" class="form-control" id="filmduur"  placeholder="Enter movie duration" required>
+             <input type="number" @bind="NewMovie.Length" style="background-color: black; border: none;" class="form-control" id="filmduur"  placeholder="Enter movie duration" required>
              <hr style="color:#707070; width: 200px; margin-top:5px;" />
            </div>
          </div>
@@ -77,16 +95,28 @@
 </div>
 
 @code {
-    // Properties
-    private int? Zaalnummer { get; set; }
-    private int? AantalZitplaatsen { get; set; }
-    private int? AantalRijen { get; set; }
-    private string Ruimte { get; set; }
+  private int currentCount = 0;
+  private string error = "";
 
-    // Method to add a room
-    private void VoegZaalToe()
+  private void IncrementCount()
+  {
+    currentCount++;
+  }
+    
+  private Movie NewMovie { get; set; } = new Movie();
+    
+  private async Task HandleSubmit()
+  {
+    currentCount++;
+
+    var result = await MovieService.AddMovie(NewMovie);
+
+    if (result.IsSuccessStatusCode)
     {
-        // Voeg hier de logica toe om de zaal toe te voegen
-        Console.WriteLine("Zaal toegevoegd!");
+      NavigationManager.NavigateTo("/");
     }
+
+    error = result.ToString();
+  }
+
 }
