@@ -14,4 +14,11 @@
       <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Components\Pages\BasePagesThirza\" />
+      <Folder Include="Components\Pages\Eng\" />
+      <Folder Include="Components\Pages\NL\" />
+      <Folder Include="wwwroot\Img\" />
+    </ItemGroup>
+
 </Project>
