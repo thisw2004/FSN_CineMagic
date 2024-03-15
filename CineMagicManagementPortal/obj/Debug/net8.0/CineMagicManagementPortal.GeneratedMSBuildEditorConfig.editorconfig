@@ -42,6 +42,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOTFxGaWxtVG9ldm9lZ2VuLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/thirz/source/repos/CineMagic/CineMagicManagementPortal/Components/Pages/NL/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOTFxIb21lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thirz/source/repos/CineMagic/CineMagicManagementPortal/Components/Pages/NL/VoorstellingToevoegen.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOTFxWb29yc3RlbGxpbmdUb2V2b2VnZW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thirz/source/repos/CineMagic/CineMagicManagementPortal/Components/Pages/NL/ZaalToevoegen.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOTFxaYWFsVG9ldm9lZ2VuLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/thirz/source/repos/CineMagic/CineMagicManagementPortal/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
