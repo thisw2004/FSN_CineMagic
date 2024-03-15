@@ -16,3 +16,14 @@
     position: fixed;
     top: 0;
 }
+
+#addMovieDiv{
+    /*
+    background-color:mediumpurple;
+    */
+    margin-top:-100px !important;
+}
+
+.input:focus{
+    border:none;
+}
