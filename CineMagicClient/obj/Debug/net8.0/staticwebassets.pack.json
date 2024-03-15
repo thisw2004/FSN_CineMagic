@@ -29,8 +29,28 @@
       "PackagePath": "staticwebassets\\img\\NL_flag.png"
     },
     {
+      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicClient\\wwwroot\\img\\fb.png",
+      "PackagePath": "staticwebassets\\img\\fb.png"
+    },
+    {
+      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicClient\\wwwroot\\img\\fb2.png",
+      "PackagePath": "staticwebassets\\img\\fb2.png"
+    },
+    {
+      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicClient\\wwwroot\\img\\insta.png",
+      "PackagePath": "staticwebassets\\img\\insta.png"
+    },
+    {
+      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicClient\\wwwroot\\img\\location.png",
+      "PackagePath": "staticwebassets\\img\\location.png"
+    },
+    {
       "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicClient\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicClient\\wwwroot\\img\\x.png",
+      "PackagePath": "staticwebassets\\img\\x.png"
     },
     {
       "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicClient\\wwwroot\\style.css",

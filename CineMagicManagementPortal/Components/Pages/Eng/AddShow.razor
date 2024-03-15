@@ -1,32 +1,32 @@
-﻿@page "/addShows"
-
+﻿@page "/addShow"
+<PageTitle>Eng - Add show</PageTitle>
 <div class="zaal-toevoegen">
-  <h1 class="text-center">Voorstelling toevoegen</h1>
+  <h1 class="text-center">Add Show</h1>
  <form @submit="VoegZaalToe" style="margin-top:50px !important; margin-left: 36%;">
      <div class="form-group row">
-       <label for="zaalnummer" class="col-sm-2 col-form-label">Zaalnummer:</label>
+       <label for="zaalnummer" class="col-sm-2 col-form-label">Roomnumber:</label>
        <div class="col-sm-10">
-         <input type="number" style="background-color:black; border: none;" class="form-control" id="zaalnummer" @bind="Zaalnummer" placeholder="Enter Zaalnummer" required>
+         <input type="number" style="background-color:black; border: none;" class="form-control" id="zaalnummer" @bind="Zaalnummer" placeholder="Enter roomnumber" required>
          <hr style="color:#707070; width: 200px; margin-top:5px;" />
        </div>
      </div>
      <div class="form-group row">
-       <label for="filmtitel" class="col-sm-2 col-form-label">Film titel::</label>
+       <label for="filmtitel" class="col-sm-2 col-form-label">Movie title:</label>
        <div class="col-sm-10">
-         <input type="number" style="background-color:black; border: none;" class="form-control" id="filmtitel" @bind="AantalZitplaatsen" placeholder="Enter filmtitel" required>
+         <input type="number" style="background-color:black; border: none;" class="form-control" id="filmtitel" @bind="AantalZitplaatsen" placeholder="Enter movietitle" required>
          <hr style="color:#707070; width: 200px; margin-top:5px;" />
        </div>
      </div>
      <div class="form-group row">
        <label for="datum" class="col-sm-2 col-form-label">Date:</label>
        <div class="col-sm-10">
-         <input type="datetime" style="background-color:black; border: none;" class="form-control" id="datum" @bind="AantalRijen" placeholder="datum" required>
+         <input type="datetime" style="background-color:black; border: none;" class="form-control" id="datum" @bind="AantalRijen" placeholder="date" required>
          <hr style="color:#707070; width: 200px; margin-top:5px;" />
        </div>
      </div>
      
-     <button type="submit" style="background-color:#9f0202; border: none;" class="btn btn-primary">Zaal toevoegen</button>
-   </form>
+     <button type="submit" style="background-color:#9f0202; border: none;" class="btn btn-primary">Add show</button>
+ </form>  
   
  
 </div>

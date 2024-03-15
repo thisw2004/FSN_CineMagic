@@ -1,0 +1,91 @@
+﻿@page "/filmtoevoegen"
+
+<div class="zaal-toevoegen">
+  <h1 class="text-center">Film toevoegen</h1>
+ <form @submit="addFilm" style="margin-top:50px !important; margin-left: 36%;">
+    
+     <div class="form-group row">
+           <label for="titel" class="col-sm-2 col-form-label">Titel:</label>
+           <div class="col-sm-10">
+             <input type="text" style="background-color: black; border: none;" class="form-control" id="titel"  placeholder="Enter Titel" required>
+             <hr style="color:#707070; width: 200px; margin-top:5px;" />
+           </div>
+         </div>
+     
+         <div class="form-group row">
+           <label for="beschrijving" class="col-sm-2 col-form-label">Beschrijving:</label>
+           <div class="col-sm-10">
+             <textarea type="text" style="background-color: black; border: none; resize: none;" class="form-control" id="beschrijving" placeholder="Enter Beschrijving" required rows="4"></textarea>
+             <hr style="color:#707070; width: 200px; margin-top:5px;" />
+           </div>
+         </div>
+     
+         <div class="form-group row">
+           <label for="korteBeschrijving" class="col-sm-2 col-form-label">Korte beschrijving:</label>
+           <div class="col-sm-10">
+             <textarea type="text" style="background-color: black; border: none; resize: none;" class="form-control" id="korteBeschrijving"  placeholder="Enter Korte Beschrijving" required rows="2"></textarea>
+             <hr style="color:#707070; width: 200px; margin-top:5px;" />
+           </div>
+         </div>
+     
+         <div class="form-group row">
+           <label for="afbeelding" class="col-sm-2 col-form-label">Afbeelding:</label>
+           <div class="col-sm-10">
+             <input type="text" style="background-color: black; border: none;" class="form-control" id="afbeelding"  placeholder="Enter Afbeelding URL" required>
+             <hr style="color:#707070; width: 200px; margin-top:5px;" />
+           </div>
+         </div>
+     
+         <div class="form-group row">
+           <label for="genre" class="col-sm-2 col-form-label">Genre:</label>
+           <div class="col-sm-10">
+             <input type="text" style="background-color: black; border: none;" class="form-control" id="genre"  placeholder="Enter Genre" required>
+             <hr style="color:#707070; width: 200px; margin-top:5px;" />
+           </div>
+         </div>
+     
+         <div class="form-group row">
+           <label for="rating" class="col-sm-2 col-form-label">Rating:</label>
+           <div class="col-sm-10">
+             <input type="number" style="background-color: black; border: none;" class="form-control" id="rating"  placeholder="Enter Rating" required>
+             <hr style="color:#707070; width: 200px; margin-top:5px;" />
+           </div>
+         </div>
+         
+         <div class="form-group row">
+           <label for="language" class="col-sm-2 col-form-label">Language:</label>
+           <div class="col-sm-10">
+             <input type="number" style="background-color: black; border: none;" class="form-control" id="language"  placeholder="Enter language" required>
+             <hr style="color:#707070; width: 200px; margin-top:5px;" />
+           </div>
+         </div>
+         
+         <div class="form-group row">
+           <label for="filmduur" class="col-sm-2 col-form-label">Filmduur:</label>
+           <div class="col-sm-10">
+             <input type="number" style="background-color: black; border: none;" class="form-control" id="filmduur"  placeholder="Enter filmduur" required>
+             <hr style="color:#707070; width: 200px; margin-top:5px;" />
+           </div>
+         </div>
+         
+     
+         <button type="submit" style="background-color:#9f0202; border: none;" class="btn btn-primary">Zaal toevoegen</button>
+ </form>    
+  
+ 
+</div>
+
+@code {
+    // Properties
+    private int? Zaalnummer { get; set; }
+    private int? AantalZitplaatsen { get; set; }
+    private int? AantalRijen { get; set; }
+    private string Ruimte { get; set; }
+
+    // Method to add a room
+    private void VoegZaalToe()
+    {
+        // Voeg hier de logica toe om de zaal toe te voegen
+        Console.WriteLine("Zaal toegevoegd!");
+    }
+}

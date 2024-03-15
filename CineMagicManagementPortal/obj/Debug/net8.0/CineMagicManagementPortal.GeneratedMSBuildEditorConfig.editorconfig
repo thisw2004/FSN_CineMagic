@@ -22,20 +22,36 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thirz/source/repos/CineMagic/CineMagicManagementPortal/Components/Pages/AddFilms.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZGRGaWxtcy5yYXpvcg==
+[C:/Users/thirz/source/repos/CineMagic/CineMagicManagementPortal/Components/Pages/Eng/AddMovie.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFbmdcQWRkTW92aWUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thirz/source/repos/CineMagic/CineMagicManagementPortal/Components/Pages/AddRoom.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZGRSb29tLnJhem9y
+[C:/Users/thirz/source/repos/CineMagic/CineMagicManagementPortal/Components/Pages/Eng/AddRoom.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFbmdcQWRkUm9vbS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thirz/source/repos/CineMagic/CineMagicManagementPortal/Components/Pages/AddShows.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZGRTaG93cy5yYXpvcg==
+[C:/Users/thirz/source/repos/CineMagic/CineMagicManagementPortal/Components/Pages/Eng/AddShow.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFbmdcQWRkU2hvdy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thirz/source/repos/CineMagic/CineMagicManagementPortal/Components/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
+[C:/Users/thirz/source/repos/CineMagic/CineMagicManagementPortal/Components/Pages/Eng/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFbmdcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thirz/source/repos/CineMagic/CineMagicManagementPortal/Components/Pages/NL/AddFilms.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOTFxBZGRGaWxtcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thirz/source/repos/CineMagic/CineMagicManagementPortal/Components/Pages/NL/AddRoom.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOTFxBZGRSb29tLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thirz/source/repos/CineMagic/CineMagicManagementPortal/Components/Pages/NL/AddShows.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOTFxBZGRTaG93cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thirz/source/repos/CineMagic/CineMagicManagementPortal/Components/Pages/NL/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOTFxIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/thirz/source/repos/CineMagic/CineMagicManagementPortal/Components/Routes.razor]
