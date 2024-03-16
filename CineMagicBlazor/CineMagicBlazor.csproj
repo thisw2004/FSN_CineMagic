@@ -18,7 +18,17 @@
       <Folder Include="Components\Pages\BasePagesThirza\" />
       <Folder Include="Components\Pages\Eng\" />
       <Folder Include="Components\Pages\NL\" />
-      <Folder Include="wwwroot\Img\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\Img1\img\Eng_flag.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\Img1\img\fb.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\Img1\img\fb2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\Img1\img\insta.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\Img1\img\location.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\Img1\img\logo.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\Img1\img\NL_flag.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\Img1\img\x.png" />
     </ItemGroup>
 
 </Project>
