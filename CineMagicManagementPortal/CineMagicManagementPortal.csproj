@@ -6,4 +6,10 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\Img1\Img\Eng_flag.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\Img1\Img\logo.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\Img1\Img\NL_flag.png" />
+    </ItemGroup>
+
 </Project>

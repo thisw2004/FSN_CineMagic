@@ -1,4 +1,7 @@
-﻿@page "/film-details"
+﻿@page "/film-details/{id:int}"
+@using CineMagicData.Models
+@using CineMagic.Services
+@inject MovieService MovieService
 
 <div style="background-color: #ff961d; height: 20vh; width: 100%;">
     <!-- TODO: Voeg het logo hier toe -->
@@ -6,9 +9,9 @@
 
 <div style="padding-top: 30px; padding-left: 80px; display: flex;">
     <div style="text-align: center; width: 70%;">
-        <h1>The Godfather</h1>
+        <h1>@_movie.Title</h1>
         <div style="text-align: center;">
-            <p>@LoremIpsum</p>
+            <p>@_movie.Description</p>
             <!-- You can bind the text dynamically to a property in your code behind -->
         </div>
     </div>
@@ -18,6 +21,17 @@
 </div>
 
 @code {
+
+    [Parameter] 
+    public int Id { get; set; }
+
+    private Movie _movie = new Movie();
+    
+    protected override async Task OnInitializedAsync()
+    {
+        _movie = await MovieService.GetMovieById(Id);
+    }
+    
     // Define a property to hold your Lorem Ipsum text
     string LoremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eleifend eros ut mattis consectetur. Praesent in ligula nibh. Sed auctor, ante ac ultrices laoreet, orci eros laoreet urna, et semper ante erat in urna. Curabitur sapien ipsum, tempor convallis eros vel, accumsan ultrices urna. In ut placerat turpis. Vivamus id elit sed nisi fringilla molestie in vitae libero. Suspendisse in ultrices nunc. Nulla ultrices leo sit amet elit malesuada, non fringilla est dapibus. Curabitur dapibus efficitur urna, nec accumsan arcu posuere vel.";
 }

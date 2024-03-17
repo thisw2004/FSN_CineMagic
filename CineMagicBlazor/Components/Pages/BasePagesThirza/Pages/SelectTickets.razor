@@ -1,0 +1,34 @@
+﻿@page "/selectTickets"
+
+<h3>CineMAGIC - Select Tickets</h3>
+<div class="newsletter">
+    <!-- Newsletter subscription form (optional) -->
+</div>
+<div class="order-tickets">
+    <!-- Ticket ordering section -->
+    <div class="ticket">
+        <span>Ticketsort 1</span>
+        <input type="number" @bind="Ticket1Quantity" />
+        <span>€0</span>
+    </div>
+    <!-- Repeat similar markup for other ticket types -->
+    <!-- ... -->
+    <div class="total">
+        <span>Total:</span>
+        <span>@TotalTickets tickets - €@TotalPrice</span>
+    </div>
+    <button @onclick="PlaceOrder">Kies plaatsen</button>
+</div>
+
+@code {
+    private int Ticket1Quantity = 3; // Initialize with default values
+    // Add similar properties for other ticket types
+
+    private int TotalTickets => Ticket1Quantity /* + ... */; // Calculate total tickets
+    private decimal TotalPrice => 0; // Calculate total price (if needed)
+
+    private void PlaceOrder()
+    {
+        // Handle order placement logic
+    }
+}

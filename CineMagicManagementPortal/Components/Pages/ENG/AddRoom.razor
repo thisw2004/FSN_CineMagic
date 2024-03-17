@@ -1,0 +1,67 @@
+﻿
+
+@page "/addRoom"
+@rendermode InteractiveServer
+@using CineMagicData.Models
+@using CineMagic.Services
+@inject RoomService RoomService
+@inject NavigationManager NavigationManager
+<PageTitle>Eng - Add room</PageTitle>
+
+<div class="zaal-toevoegen">
+  <h1 class="text-center" >Add room</h1>
+  <p>@error</p>
+ <form @onsubmit="HandleSubmit" style="margin-top:50px !important; margin-left: 36%;">
+     <div class="form-group row">
+       <label for="zaalnummer" class="col-sm-2 col-form-label">Roomnumber:</label>
+       <div class="col-sm-10">
+         <input type="number" style="background-color:black; border: none;" class="form-control" id="zaalnummer" @bind="NewRoom.room_number" placeholder="Enter roomnumber" required>
+         <hr style="color:#707070; width: 200px; margin-top:5px;" />
+       </div>
+     </div>
+     <div class="form-group row">
+       <label for="aantalZitplaatsen" class="col-sm-2 col-form-label">Number of seats:</label>
+       <div class="col-sm-10">
+         <input type="number" style="background-color:black; border: none;" class="form-control" id="aantalZitplaatsen" @bind="NewRoom.amount_seats" placeholder="Enter number of seats" required>
+         <hr style="color:#707070; width: 200px; margin-top:5px;" />
+       </div>
+     </div>
+     <div class="form-group row">
+       <label for="aantalRijen" class="col-sm-2 col-form-label">Number of rows:</label>
+       <div class="col-sm-10">
+         <input type="number" style="background-color:black; border: none;" class="form-control" id="aantalRijen" @bind="NewRoom.amount_rows" placeholder="Enter number of rows" required>
+         <hr style="color:#707070; width: 200px; margin-top:5px;" />
+       </div>
+     </div>
+     <div class="form-group row">
+       <label for="ruimte" class="col-sm-2 col-form-label">Roomsize:</label>
+       <div class="col-sm-10">
+         <input type="text" style="background-color:black; border: none;" class="form-control" id="ruimte" @bind="NewRoom.size" placeholder="Enter room size in square metres" required>
+         <hr style="color:#707070; width: 200px; margin-top:5px;" />
+       </div>
+     </div>
+     <button type="submit" style="background-color:#9f0202; border: none;" class="btn btn-primary">Add room</button>
+   </form>
+  
+ 
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+@code {
+    
+    private Room NewRoom{ get; set; } = new Room();
+    private string error = "";
+
+    private async Task HandleSubmit()
+    {
+
+        var result = await RoomService.AddRoom(NewRoom);
+
+        if (result.IsSuccessStatusCode)
+        {
+            NavigationManager.NavigateTo("/");
+        }
+
+        error = result.ToString();
+    }
+}

@@ -1,0 +1,86 @@
+﻿
+
+@page "/voorstellingtoevoegen"
+@rendermode InteractiveServer
+@using CineMagicData.Models
+@using CineMagic.Services
+@inject ShowService ShowService
+@inject MovieService MovieService
+@inject RoomService RoomService
+@inject NavigationManager NavigationManager
+<PageTitle>NL - CineMagic Managementportaal - Voorstelling toevoegen</PageTitle>
+<div class="zaal-toevoegen">
+  <h1 class="text-center">Voorstelling toevoegen</h1>
+  <p>@error</p>
+ <form @onsubmit="HandleSubmit" style="margin-top:50px !important; margin-left: 36%;">
+     <div class="form-group row">
+       <label for="zaalnummer" class="col-sm-2 col-form-label">Zaalnummer:</label>
+       <div class="col-sm-10">
+         
+         <select style="background-color:black; border: none;" @bind="Show.RoomId" class="form-control" id="roomNumber">
+           @* Populate this list with actual room numbers from your database or a predefined list *@
+           @foreach (var room in _rooms)
+           {
+             <option value="@room.Id">@room.room_number</option>
+           }
+
+           <!-- More room options -->
+         </select> <hr style="color:#707070; width: 200px; margin-top:5px;"/>
+       </div>
+     </div>
+     <div class="form-group row">
+       <label for="filmtitel" class="col-sm-2 col-form-label">Film id:</label>
+       <div class="col-sm-10">
+         
+         <select style="background-color:black; border: none;" @bind="Show.MovieId" class="form-control" id="filmTitle">
+           @* Populate this list with actual film titles from your database or a predefined list *@
+           @foreach (var movie in _movies)
+           {
+             <option value="@movie.Id">@movie.Title</option>
+           }
+           <!-- More film options -->
+         </select> <hr style="color:#707070; width: 200px; margin-top:5px;"/>
+       </div>
+     </div>
+     <div class="form-group row">
+       <label for="datum" class="col-sm-2 col-form-label">Date:</label>
+       <div class="col-sm-10">
+         <input @bind="Show.DateTime" type="datetime-local" style="background-color:black; border: none;" class="form-control" id="datum"  placeholder="vul datum in" required>
+         <hr style="color:#707070; width: 200px; margin-top:5px;" />
+         
+       </div>
+     </div>
+     
+     <button type="submit" style="background-color:#9f0202; border: none;" class="btn btn-primary">Voorstelling toevoegen</button>
+   </form>
+  
+ 
+</div>
+
+@code {
+  private RoomMovie Show { get; set; } = new RoomMovie();
+  List<Movie> _movies = new List<Movie>();
+  List<Room> _rooms = new List<Room>();
+
+  private string error = "";
+    
+    
+  protected override async Task OnInitializedAsync()
+  {
+    _movies = (await MovieService.GetAllMovies()).ToList();
+    _rooms = (await RoomService.GetAllRooms()).ToList();
+  }
+    
+  private async Task HandleSubmit()
+  {
+
+    var result = await ShowService.AddShow(Show);
+
+    if (result.IsSuccessStatusCode)
+    {
+      NavigationManager.NavigateTo("/");
+    }
+
+    error = result.ToString();
+  }
+}

@@ -1,16 +1,34 @@
 ﻿@inherits LayoutComponentBase
-
-<div class="page">
-    <div class="sidebar">
-        <NavMenu/>
-    </div>
-
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<div class="page" id="body">
+    
     <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
+        <div  id="nav">
+            <img src="Img/logo.png" alt="logo" style="margin-top:-30px !important; width:300px; height: 300px; display: block; margin: 0 auto; padding: 0px; "/>
+            @*language flags*@
+            @*TODO:hier links van maken,pas doen als alle pages goed zijn.*@
+            <img src="Img/Eng_flag.png" style="width:100px; height: 50px; float: right; margin-top: -240px; margin-right: 140px;"/>
+            <img src="Img/NL_flag.png" style="width:100px; height: 50px; float: right; margin-top: -240px; margin-right: 260px; "/>
+            <a href="#" style="text-decoration:none; color:black; width:100px; height: 50px; float: right; margin-top: -230px; margin-right: 1700px; ">Nieuwsbrief</a>
+            <a href="https://www.instagram.com/cinemagic.official/" target="_blank">
+                <img src="Img/insta.png" style="width:100px; height: 50px; float: right; margin-top: -240px; margin-right: 1550px; " />
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61553547868972&locale=nl_NL" target="_blank">
+                <img src="Img/fb.png" style="width:100px; height: 50px; float: right; margin-top: -240px; margin-right: 1430px; "/>
+            </a>
+            <a href="https://twitter.com/Cinemagic" target="_blank">
+               <img src="Img/x.png" style="width:100px; height: 50px; float: right; margin-top: -240px; margin-right: 1330px;" /> 
+            </a>
+            <a href="/route">
+                <img src="Img/location.png" style="width:100px; height: 50px; float: right; margin-top: -240px; margin-right: 20px;" />
+            </a>
+            
+            
+            
+            
+        </div>    
+        
+        <article class="content"  style="margin-top:300px;padding:0px; ">
             @Body
         </article>
     </main>

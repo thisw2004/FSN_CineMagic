@@ -1,0 +1,56 @@
+﻿@page "/"
+
+<PageTitle>Eng - CineMagic ManagementPortal ~ Home</PageTitle>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMAGIC Management Portal</title>
+    <style>
+        /* Add your custom CSS styles here */
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .logo {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .logo img {
+            width: 200px;
+            height: auto;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #9f2020;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            height: 75px;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="buttons">
+    <button class="button"><a href="/addMovie" class="button">Add movie</a>
+    </button>
+    <button class="button"><a href="/addRoom" class="button">Add room</a>
+    </button>
+    <button class="button"><a href="/addShow" class="button">Add show</a>
+    </button>
+    <button class="button"><a href="#" class="button">Manage pricing</a>
+    </button>    
+</div>
+</body>
+</html>

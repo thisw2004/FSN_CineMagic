@@ -1,47 +1,162 @@
-﻿@page "/"
-@using CineMagicData.Models
-@using CineMagic.Services
-@inject CineMagic.Services.MovieService MovieService
+﻿<!-- FilmListings.razor -->
+@page "/"
+<style>
+    /* Reset some default styling */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      display: flex;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Sidebar styling */
+    .filter-sidebar {
+      width: 200px; /* Adjust the width of the sidebar to your preference */
+      background-color: #f5f5f5; /* Light grey background */
+      height: 100vh; /* Full height of the viewport */
+      padding: 20px; /* Padding around the filter items */
+      overflow-y: auto; /* Enable scrolling if content is taller than the screen */
+    }
+    
+    /* Film listing styling */
+    .film-listing {
+      flex-grow: 1; /* Take up remaining width */
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust minmax values for your preferred card size */
+      gap: 20px; /* Space between cards */
+    }
+    
+    /* Film card styling */
+    .film-card {
+      border: 1px solid #ddd; /* Light grey border */
+      position: relative;
+      overflow: hidden; /* Ensure that content does not overflow */
+    }
+    
+    .film-card img {
+      width: 100%; /* Make image fill the card */
+      height: auto; /* Keep the aspect ratio */
+    }
+    
+    /* Basic info styling */
+    .film-info {
+      padding: 10px;
+      background: #ffffff; /* White background */
+    }
+    
+    /* Expand button styling */
+    .expand-details {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #007bff; /* Bootstrap primary blue */
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 30px; /* Size of the button */
+      height: 30px;
+      text-align: center;
+      line-height: 30px; /* Vertically center the plus sign */
+      cursor: pointer;
+      font-size: 20px;
+    }
+    
+    /* Additional details section, hidden by default */
+    .additional-details {
+      display: none; /* Hide details by default */
+      padding: 10px;
+      background: #f8f9fa; /* Light background for the details */
+    }
+    
+    /* When a card is expanded, display the additional details */
+    .film-card.expanded .additional-details {
+      display: block;
+    }
+    
+    /* Styling for the filter items */
+    .filter-sidebar div {
+      padding: 10px;
+      margin-bottom: 8px; /* Space between filters */
+      background-color: #e9ecef; /* Light background for the filter items */
+      cursor: pointer;
+    }
+    
+    /* Hover effect for filter items */
+    .filter-sidebar div:hover {
+      background-color: #dee2e6; /* Slightly darker on hover */
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.film-card');
+    
+      cards.forEach(card => {
+    	card.querySelector('.expand-details').addEventListener('click', function() {
+    	  card.classList.toggle('expanded');
+    	});
+      });
+    });
 
-<PageTitle>Home</PageTitle>
-
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
-
-
+</script>
+<div class="filter-sidebar">
+    <!-- Filter options go here -->
+    <div>Filter 1</div>
+    <div>Filter 2</div>
+    <div>Filter 3</div>
+</div>
 
 <section class="film-listing">
     <!-- Demo film card -->
-    @foreach (var movie in _movies)
+    @foreach (var film in Films)
     {
         <div class="film-card">
             <img src="https://via.placeholder.com/200" alt="Demo Film Image">
             <div class="film-info">
-                <h3>@movie.Title</h3>
-                <p>@movie.Description</p>
+                <h3>@film.Title</h3>
+                <p>@film.Description</p>
             </div>
-            <button class="expand-details" @onclick="() => ToggleDetails(movie)">+</button>
-            <div class="additional-details" style="">
-                <p>Director: </p>
-                <p>Cast: </p>
+            <button class="expand-details" @onclick="() => ToggleDetails(film)">+</button>
+            <div class="additional-details" style="@film.DetailsStyle">
+                <p>Director: @film.Director</p>
+                <p>Cast: @film.Cast</p>
             </div>
         </div>
     }
-</section>
 
-@code
-{
-    List<Movie> _movies = new List<Movie>();
+    </section>
 
-    protected override async Task OnInitializedAsync()
+@code {
+    // Define a class for the film
+    public class Film
     {
-        _movies = (await MovieService.GetAllMovies()).ToList();
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Director { get; set; }
+        public string Cast { get; set; }
+        public bool IsExpanded { get; set; }
+        public string DetailsStyle => IsExpanded ? "display: block;" : "display: none;";
     }
 
-    // Method to toggle the details visibility
-    void ToggleDetails(Movie movie)
+    // Define some sample films
+    List<Film> Films = new List<Film>
     {
-        // movie.IsExpanded = !movie.IsExpanded;
+        new Film { Title = "Film Title 1", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" },
+        new Film { Title = "Film Title 2", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" },
+        new Film { Title = "Film Title 3", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" },
+        new Film { Title = "Film Title 4", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" },
+        new Film { Title = "Film Title 5", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" },
+        new Film { Title = "Film Title 6", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" }
+    };
+
+    // Method to toggle the details visibility
+    void ToggleDetails(Film film)
+    {
+        film.IsExpanded = !film.IsExpanded;
     }
 }
