@@ -1,33 +1,41 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicApi/CineMagicApi.csproj": {}
+    "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicApi\\CineMagicApi.csproj": {}
   },
   "projects": {
-    "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicApi/CineMagicApi.csproj": {
+    "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicApi\\CineMagicApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicApi/CineMagicApi.csproj",
+        "projectUniqueName": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicApi\\CineMagicApi.csproj",
         "projectName": "CineMagicApi",
         "projectPath": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicApi\\CineMagicApi.csproj",
         "packagesPath": "C:\\Users\\Joey1\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+        ],
         "configFilePaths": [
-          "/Users/jorikvanmaaren/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Joey1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicData/CineMagicData.csproj": {
-                "projectPath": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicData/CineMagicData.csproj"
+              "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicData\\CineMagicData.csproj": {
+                "projectPath": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicData\\CineMagicData.csproj"
               }
             }
           }
@@ -74,26 +82,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicData/CineMagicData.csproj": {
+    "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicData\\CineMagicData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicData/CineMagicData.csproj",
+        "projectUniqueName": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicData\\CineMagicData.csproj",
         "projectName": "CineMagicData",
-        "projectPath": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicData/CineMagicData.csproj",
-        "packagesPath": "/Users/jorikvanmaaren/.nuget/packages/",
-        "outputPath": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicData/obj/",
+        "projectPath": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicData\\CineMagicData.csproj",
+        "packagesPath": "C:\\Users\\Joey1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicData\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+        ],
         "configFilePaths": [
-          "/Users/jorikvanmaaren/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Joey1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -181,7 +197,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

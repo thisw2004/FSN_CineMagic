@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "sXqRRLyTppTFdgu9zLEpcKfdxk8eCKo6ke8zg3g/B3I=",
+  "Hash": "eGxlWtllPHecymCTEo4HXJri/TwQ1wEQ4nlG4zkXYE0=",
   "Source": "CineMagicBlazor",
   "BasePath": "_content/CineMagicBlazor",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicApi/CineMagicApi.csproj",
+      "Identity": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicApi\\CineMagicApi.csproj",
       "Version": 2,
       "Source": "CineMagicApi",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
@@ -20,19 +20,19 @@
   ],
   "DiscoveryPatterns": [
     {
-      "Name": "CineMagicBlazor/wwwroot",
+      "Name": "CineMagicBlazor\\wwwroot",
       "Source": "CineMagicBlazor",
-      "ContentRoot": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/wwwroot/",
+      "ContentRoot": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\wwwroot\\",
       "BasePath": "_content/CineMagicBlazor",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/obj/Debug/net8.0/scopedcss/bundle/CineMagicBlazor.styles.css",
+      "Identity": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CineMagicBlazor.styles.css",
       "SourceId": "CineMagicBlazor",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/obj/Debug/net8.0/scopedcss/bundle/",
+      "ContentRoot": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/CineMagicBlazor",
       "RelativePath": "CineMagicBlazor.styles.css",
       "AssetKind": "All",
@@ -45,13 +45,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/obj/Debug/net8.0/scopedcss/bundle/CineMagicBlazor.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CineMagicBlazor.styles.css"
     },
     {
-      "Identity": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/obj/Debug/net8.0/scopedcss/projectbundle/CineMagicBlazor.bundle.scp.css",
+      "Identity": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CineMagicBlazor.bundle.scp.css",
       "SourceId": "CineMagicBlazor",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/obj/Debug/net8.0/scopedcss/projectbundle/",
+      "ContentRoot": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/CineMagicBlazor",
       "RelativePath": "CineMagicBlazor.bundle.scp.css",
       "AssetKind": "All",
@@ -64,13 +64,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/obj/Debug/net8.0/scopedcss/projectbundle/CineMagicBlazor.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CineMagicBlazor.bundle.scp.css"
     },
     {
-      "Identity": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/wwwroot/app.css",
+      "Identity": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\wwwroot\\app.css",
       "SourceId": "CineMagicBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/wwwroot/",
+      "ContentRoot": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\wwwroot\\",
       "BasePath": "_content/CineMagicBlazor",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -83,13 +83,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/app.css"
+      "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/wwwroot/bootstrap/bootstrap.min.css",
+      "Identity": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "CineMagicBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/wwwroot/",
+      "ContentRoot": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\wwwroot\\",
       "BasePath": "_content/CineMagicBlazor",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -102,13 +102,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css"
+      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/wwwroot/bootstrap/bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "CineMagicBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/wwwroot/",
+      "ContentRoot": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\wwwroot\\",
       "BasePath": "_content/CineMagicBlazor",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -121,13 +121,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css.map"
+      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/wwwroot/favicon.png",
+      "Identity": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\wwwroot\\favicon.png",
       "SourceId": "CineMagicBlazor",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/wwwroot/",
+      "ContentRoot": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\wwwroot\\",
       "BasePath": "_content/CineMagicBlazor",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -140,7 +140,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/favicon.png"
+      "OriginalItemSpec": "wwwroot\\favicon.png"
     }
   ]
 }

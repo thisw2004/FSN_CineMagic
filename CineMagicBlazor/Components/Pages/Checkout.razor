@@ -1,0 +1,87 @@
+﻿@page "/Checkout"
+@rendermode InteractiveServer
+@using Mollie.Api.Client
+@using Mollie.Api.Client.Abstract
+@using Mollie.Api.Models.PaymentMethod
+@using Mollie.Api.Models
+@using Mollie.Api.Models.Payment.Request
+@using System.Reflection
+@using Microsoft.Extensions.Configuration
+@inject HttpClient HttpClient
+@inject IConfiguration Configuration
+
+<h3>Select Payment Method</h3>
+
+@if (PaymentMethods != null)
+{
+    foreach (var method in PaymentMethods)
+    {
+        <button @onclick="() => ProceedToPayment(method)">@method.Description</button>
+    }
+}
+else
+{
+    <p>Loading available payment methods...</p>
+}
+
+@code {
+
+    private List<PaymentMethodResponse> PaymentMethods;
+
+    protected override async Task OnInitializedAsync() 
+    {
+         await GetPaymentMethodsAsync();
+    }
+
+    private async Task GetPaymentMethodsAsync() 
+    {
+        try
+        {
+            string mollieApiKey = Configuration["Mollie:ApiKey"];
+            
+            using var paymentMethodClient = new PaymentMethodClient(mollieApiKey, HttpClient);
+            var paymentMethodList = await paymentMethodClient.GetPaymentMethodListAsync();
+
+            var embeddedProperty = paymentMethodList.GetType().GetProperty("Embedded", BindingFlags.Public | BindingFlags.Instance);
+            if (embeddedProperty != null)
+            {
+                var embeddedPropertyValue = embeddedProperty.GetValue(paymentMethodList);
+                var paymentMethodProperty = embeddedPropertyValue.GetType().GetProperty("PaymentMethods", BindingFlags.Public | BindingFlags.Instance);
+
+                if(paymentMethodProperty != null)
+                {
+                    PaymentMethods = (List<PaymentMethodResponse>)paymentMethodProperty.GetValue(embeddedPropertyValue);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    private async Task ProceedToPayment(PaymentMethodResponse method) 
+    {
+        if (method != null) 
+        {
+            string mollieApiKey = Configuration["Mollie:ApiKey"];
+            // Construct your ideal payment request
+            var paymentRequest = new PaymentRequest
+            {
+                 Amount = new Amount(Currency.EUR, "100.00"),
+                 Description = "Test payment of the example project",
+                 RedirectUrl = "http://google.com",
+                 Method = method.Id
+            };
+
+            // Initialize a new PaymentClient with your API key
+            using IPaymentClient paymentClient = new PaymentClient(mollieApiKey, HttpClient);
+
+            // Send request to Mollie API
+            var paymentResponse = await paymentClient.CreatePaymentAsync(paymentRequest);
+
+            // What you do next depends on the Mollie API and your app's needs...
+            // Redirect to the checkoutUrl?
+        }
+    }
+}

@@ -1,4 +1,5 @@
 using CineMagicBlazor.Components;
+using CineMagicBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,20 +7,39 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-builder.Services.AddHttpClient<CineMagic.Services.MovieService>(client =>
+// builder.Services.AddHttpClient<CineMagic.Services.MovieService>(client =>
+// {
+//     client.BaseAddress = new Uri("http://localhost:5254/");
+// });
+//
+// builder.Services.AddHttpClient<CineMagic.Services.RoomService>(client =>
+// {
+//     client.BaseAddress = new Uri("http://localhost:5254/");
+// });
+//
+// builder.Services.AddHttpClient<CineMagic.Services.ShowService>(client =>
+// {
+//     client.BaseAddress = new Uri("http://localhost:5254/");
+// });
+
+builder.Services.AddScoped<CineMagic.Services.MovieService>();
+builder.Services.AddScoped<CineMagic.Services.RoomService>();
+builder.Services.AddScoped<CineMagic.Services.ShowService>();
+
+builder.Services.AddHttpClient<MolliePaymentService>(molliePaymentService =>
 {
-    client.BaseAddress = new Uri("http://localhost:5138/");
+    molliePaymentService.BaseAddress = new Uri("https://api.mollie.com/");
 });
 
-builder.Services.AddHttpClient<CineMagic.Services.RoomService>(client =>
+builder.Services.AddSingleton<MolliePaymentService>(provider => 
 {
-    client.BaseAddress = new Uri("http://localhost:5138/");
+    var clientFactory = provider.GetRequiredService<IHttpClientFactory>();
+    var apiKey = "test_5gWV3vc7tT6b9Duu5T9bH6gPqSMtST"; // you need to replace this with your actual API key
+    return new MolliePaymentService(clientFactory, apiKey);
 });
 
-builder.Services.AddHttpClient<CineMagic.Services.ShowService>(client =>
-{
-    client.BaseAddress = new Uri("http://localhost:5138/");
-});
+
+await builder.Build().RunAsync();
 
 var app = builder.Build();
 
@@ -33,8 +53,9 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseStaticFiles();
 app.UseAntiforgery();
+
+app.UseStaticFiles();
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
