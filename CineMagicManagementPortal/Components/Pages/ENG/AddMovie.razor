@@ -1,9 +1,8 @@
-﻿
-@page "/addMovie"
+﻿@page "/addMovie"
 
 @*uses*@
 @rendermode InteractiveServer
-@using CineMagic.Services
+@using CineMagicManagementPortal.Services
 @using CineMagicData.Models
 @inject MovieService MovieService
 @inject NavigationManager NavigationManager
@@ -43,7 +42,7 @@
          <div class="form-group row">
            <label for="afbeelding" class="col-sm-2 col-form-label">Image:</label>
            <div class="col-sm-10">
-             <input type="image" @bind="NewMovie.Image" style="background-color: black; border: none;" class="form-control" id="afbeelding"  placeholder="Enter image URL" required alt="img">
+             <input type="text" @bind="NewMovie.Image" style="background-color: black; border: none;" class="form-control" id="afbeelding"  placeholder="Enter image URL">
              <hr style="color:#707070; width: 200px; margin-top:5px;" />
            </div>
          </div>
@@ -74,7 +73,7 @@
          <div class="form-group row">
            <label for="language" class="col-sm-2 col-form-label">Language:</label>
            <div class="col-sm-10">
-             <input type="number" @bind="NewMovie.Language" style="background-color: black; border: none;" class="form-control" id="language"  placeholder="Enter language" required>
+             <input type="text" @bind="NewMovie.Language" style="background-color: black; border: none;" class="form-control" id="language"  placeholder="Enter language" required>
              <hr style="color:#707070; width: 200px; margin-top:5px;" />
            </div>
          </div>

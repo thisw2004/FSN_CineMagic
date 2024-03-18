@@ -1,10 +1,25 @@
 using CineMagicManagementPortal.Components;
-
+using CineMagicManagementPortal.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddHttpClient<MovieService>(client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5138/");
+});
+
+builder.Services.AddHttpClient<RoomService>(client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5138/");
+});
+
+builder.Services.AddHttpClient<ShowService>(client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5138/");
+});
 
 var app = builder.Build();
 

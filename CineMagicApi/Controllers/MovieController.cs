@@ -120,6 +120,26 @@ public class MovieController : ControllerBase
         }
     }
     
+    
+    [HttpGet("search")]
+    public async Task<IActionResult> SearchMovies(
+        [FromQuery] string searchTerm = null,
+        [FromQuery] string pegi = null,
+        [FromQuery] string genre = null)
+    {
+        try
+        {
+            var movies = await _movieRepo.SearchMoviesAsync(searchTerm, pegi, genre);
+            return Ok(movies);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.Message);
+            return StatusCode(StatusCodes.Status500InternalServerError,
+                new { StatusCode = "500", message = ex.Message });
+        }
+    }
+    
     [HttpGet("movie/{id}")]
     public async Task<IActionResult> GetMovieById(int id)
     {

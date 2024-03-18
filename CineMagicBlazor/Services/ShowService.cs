@@ -1,6 +1,6 @@
 using CineMagicData.Models;
 
-namespace CineMagic.Services;
+namespace CineMagicBlazor.Services;
 
 public class ShowService
 {

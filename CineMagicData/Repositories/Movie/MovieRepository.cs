@@ -42,5 +42,26 @@ public class MovieRepository : IMovieRepository
         await _ctx.SaveChangesAsync();
     }
     
+    public async Task<IEnumerable<Movie>> SearchMoviesAsync(string searchTerm = "", string pegi = "", string genre = "")
+    {
+        var query = _ctx.Movies.AsQueryable();
+
+        if (!string.IsNullOrEmpty(searchTerm))
+        {
+            query = query.Where(m => m.Title.Contains(searchTerm));
+        }
+
+        if (!string.IsNullOrEmpty(pegi))
+        {
+            query = query.Where(m => m.PegiRating.Contains(pegi));
+        }
+
+        if (!string.IsNullOrEmpty(genre))
+        {
+            query = query.Where(m => m.Genre.Contains(genre));
+        }
+
+        return await query.ToListAsync();
+    }
     
 }

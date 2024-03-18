@@ -1,8 +1,8 @@
 ﻿@page "/home"
 @rendermode InteractiveServer
 @using CineMagicData.Models
-@using CineMagic.Services
-@inject CineMagic.Services.MovieService MovieService
+@using CineMagicBlazor.Services
+@inject MovieService MovieService
 @inject NavigationManager NavigationManager
 
 <PageTitle>Home</PageTitle>
@@ -12,12 +12,44 @@
 Welcome to your new app.
 
 
+<div class="filter-sidebar">
+    <!-- Filter options go here -->
+    <div>
+        <label class="form-label" for="search">Search</label>
+        <input @bind="searchTerm" class="form-control" name="search" id="search"/>
+    </div>
+    
+    <div>
+        <label class="form-label" for="pegiRating">Age rating</label>
+        <select @bind="pegi" class="form-control" id="pegiRating">
+            <option value="" selected>all</option>
+            <option value="3">3</option>
+            <option value="7">7</option>
+            <option value="12">12</option>
+            <option value="16">16</option>
+            <option value="18">18</option>
+        </select>
+    </div>
+    <div>
+        <label class="form-label" for="ageRating">Age rating</label>
+        <select @bind="genre" class="form-control" id="ageRating">
+            <option value="" selected>all</option>
+            <option value="horror">horror</option>
+            <option value="romantic">romantic</option>
+            <option value="comedy">comedy</option>
+        </select>
+    </div>
+    <div>
+        <button @onclick="SearchMovies" class="btn btn-primary">Zoek</button>
+    </div>
+</div>
+
 <section class="film-listing">
     <!-- Demo film card -->
     @foreach (var movie in _movies)
     {
         <div class="film-card">
-            <img src="https://via.placeholder.com/200" alt="Demo Film Image">
+            <img src="@movie.Image" alt="Demo Film Image">
             <div class="film-info">
                 <h3>@movie.Title</h3>
                 <p>@movie.Description</p>
@@ -35,6 +67,10 @@ Welcome to your new app.
 @code
 {
     List<Movie> _movies = new List<Movie>();
+
+    private string searchTerm = ""; 
+    private string pegi = ""; 
+    private string genre = ""; 
     
     protected override async Task OnInitializedAsync()
     {
@@ -50,5 +86,10 @@ Welcome to your new app.
     public void NavigateTo(int id)
     {
         NavigationManager.NavigateTo($"film-details/{id}");
+    }
+
+    protected async Task SearchMovies()
+    {
+        _movies = (await MovieService.SearchMovies(searchTerm, pegi, genre)).ToList();
     }
 }

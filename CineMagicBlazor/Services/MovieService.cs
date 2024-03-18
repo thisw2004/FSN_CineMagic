@@ -1,7 +1,7 @@
 using System.Text;
 using System.Text.Json;
 
-namespace CineMagic.Services;
+namespace CineMagicBlazor.Services;
 using CineMagicData.Models;
 
 public class MovieService
@@ -45,5 +45,12 @@ public class MovieService
     public async Task<Movie> GetMovieById(int movieId)
     {
         return await _httpClient.GetFromJsonAsync<Movie>($"api/movies/movie/{movieId}");
+    }
+    
+    public async Task<IEnumerable<Movie>> SearchMovies(string searchTerm, string pegi, string genre)
+    {
+        var getUrl = $"api/movies/search?searchTerm={searchTerm}&pegi={pegi}&genre={genre}";
+        var movies = await _httpClient.GetFromJsonAsync<IEnumerable<Movie>>(getUrl);
+        return movies ?? new List<Movie>();
     }
 }

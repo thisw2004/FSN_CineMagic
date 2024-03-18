@@ -1,31 +1,31 @@
 {
   "Files": [
     {
-      "Id": "/Users/joeyseton/RiderProjects/FSN_CineMagic/CineMagic/obj/Debug/net8.0/scopedcss/projectbundle/CineMagic.bundle.scp.css",
+      "Id": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/obj/Debug/net8.0/scopedcss/projectbundle/CineMagic.bundle.scp.css",
       "PackagePath": "staticwebassets/CineMagic.bundle.scp.css"
     },
     {
-      "Id": "/Users/joeyseton/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/bootstrap/bootstrap.min.css",
+      "Id": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/bootstrap/bootstrap.min.css",
       "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
     },
     {
-      "Id": "/Users/joeyseton/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/bootstrap/bootstrap.min.css.map",
+      "Id": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/bootstrap/bootstrap.min.css.map",
       "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Id": "/Users/joeyseton/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/css/AddRooms.css",
+      "Id": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/css/AddRooms.css",
       "PackagePath": "staticwebassets/css/AddRooms.css"
     },
     {
-      "Id": "/Users/joeyseton/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/css/app.css",
+      "Id": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/css/app.css",
       "PackagePath": "staticwebassets/css/app.css"
     },
     {
-      "Id": "/Users/joeyseton/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/favicon.png",
+      "Id": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/favicon.png",
       "PackagePath": "staticwebassets/favicon.png"
     },
     {
-      "Id": "/Users/joeyseton/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/index.html",
+      "Id": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagic/wwwroot/index.html",
       "PackagePath": "staticwebassets/index.html"
     },
     {
