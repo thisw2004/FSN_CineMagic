@@ -11,12 +11,32 @@ public class RoomMovie
 
     [Required]
     public int RoomId { get; set; }
-    // public Room Room { get; set; }
     
     [Required]
     public int MovieId { get; set; }
-    // public Movie Movie { get; set; }
 
     [Required] 
     public DateTime DateTime { get; set; }
+    //
+    // public Room Room { get; set; }
+    //
+    // public Movie Movie { get; set; }
+}
+
+public class GetRoomMovie
+{
+    public int Id { get; set; }
+    public int RoomId { get; set; }
+    public int MovieId { get; set; }
+    public DateTime DateTime { get; set; }
+    public Room Room { get; set; }
+    public Movie Movie { get; set; }
+}
+
+public class GroupedShows
+{
+    
+    public DateTime DateTime { get; set; }
+
+    public List<GetRoomMovie> Shows { get; set; }
 }

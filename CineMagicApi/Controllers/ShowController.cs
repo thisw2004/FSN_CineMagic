@@ -52,4 +52,20 @@ public class ShowController : ControllerBase
                 new { StatusCode = "500", message = ex.Message });
         }
     }
+    
+    [HttpGet("all")]
+    public async Task<IActionResult> GetAllShows()
+    {
+        try
+        {
+            var shows = await _showRepo.GetAllShowsAsync();
+            return Ok(shows);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.Message);
+            return StatusCode(StatusCodes.Status500InternalServerError,
+                new { StatusCode = "500", message = ex.Message });
+        }
+    }
 }
