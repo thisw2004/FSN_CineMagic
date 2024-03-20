@@ -31,4 +31,8 @@
       <Compile Remove="Models\MovieContext.cs" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Migrations\RoomMovie\" />
+    </ItemGroup>
+
 </Project>
