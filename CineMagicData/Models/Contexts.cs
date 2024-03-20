@@ -153,6 +153,9 @@ public class Contexts
         }
         
         public DbSet<RoomMovie>  RoomMovie { get; set; }
+        public DbSet<Room>  Rooms { get; set; }
+        public DbSet<Movie>  Movies { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

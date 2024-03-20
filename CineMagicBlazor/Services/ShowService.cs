@@ -15,4 +15,9 @@ public class ShowService
     {
         return await _httpClient.PostAsJsonAsync("api/shows/add", show);
     }
+    
+    public async Task<List<GroupedShows>> GetGroupedShows()
+    {
+        return await _httpClient.GetFromJsonAsync<List<GroupedShows>>("api/shows/all");
+    }
 }

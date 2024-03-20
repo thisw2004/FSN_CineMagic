@@ -1,0 +1,55 @@
+@page "/WeekOverview"
+@using CineMagicData.Models
+@using CineMagicBlazor.Services
+@inject ShowService ShowService
+@rendermode InteractiveServer
+
+<h3>WeekOverview</h3>
+
+<div class="bg-white">
+    <div>
+        <h4>
+            Huidige datum - tot week daarna woensdag
+        </h4>
+        <div class="border border-black ">
+            @foreach(var date in _shows)
+            {
+                @foreach (var show in date.Shows)
+                {
+                    <p>@show.Id , @show.Room.Id , @show.Movie.Id</p>
+                }
+            }
+            alle dagen
+            <div class="d-flex gap-3">
+                Donderdag 14
+                <div>
+                    shows
+                </div>
+                <div>
+                    shows
+                </div>
+                <div>
+                    shows
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <button @onclick="setDates"></button>
+</div>
+
+@code {
+    
+    private List<GroupedShows> _shows = new List<GroupedShows>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _shows = (await ShowService.GetGroupedShows()).ToList();
+    }
+    
+    private void setDates()
+    {
+        
+
+    }
+}
