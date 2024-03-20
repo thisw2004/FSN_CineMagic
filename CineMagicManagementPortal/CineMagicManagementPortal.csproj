@@ -12,4 +12,9 @@
       <_ContentIncludedByDefault Remove="wwwroot\Img1\Img\NL_flag.png" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\CineMagicApi\CineMagicApi.csproj" />
+      <ProjectReference Include="..\CineMagicBlazor\CineMagicBlazor.csproj" />
+    </ItemGroup>
+
 </Project>

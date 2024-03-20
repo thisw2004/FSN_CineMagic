@@ -1,87 +1,208 @@
-﻿@page "/Checkout"
+﻿@page "/checkout"
+@using System.Text.Json
+@inject NavigationManager navigationManager
+@inject IConfiguration Configuration
 @rendermode InteractiveServer
+@using CineMagicBlazor.Services
 @using Mollie.Api.Client
-@using Mollie.Api.Client.Abstract
-@using Mollie.Api.Models.PaymentMethod
 @using Mollie.Api.Models
 @using Mollie.Api.Models.Payment.Request
-@using System.Reflection
-@using Microsoft.Extensions.Configuration
-@inject HttpClient HttpClient
-@inject IConfiguration Configuration
+@using Mollie.Api.Models.PaymentMethod
+@using Newtonsoft.Json
+@using JsonSerializer = System.Text.Json.JsonSerializer
+@using CineMagicBlazor.Services
+@using Microsoft.AspNetCore.Components
+@using Mollie.Api.Models.Payment.Request
+@using Mollie.Api.Models.PaymentMethod
+@using CineMagicBlazor.Services
+@using Microsoft.AspNetCore.Components
+@using Mollie.Api.Models.Payment.Request
+@using Mollie.Api.Models.PaymentMethod
+@using Mollie.Api.Models.Payment.Request
+@inject MolliePaymentService MollieService
+@inject ILogger<Checkout> logger;
 
-<h3>Select Payment Method</h3>
+<div class="container-fluid"> 
+    @* <h3 class="text-center pb-3 mb-4 border-bottom">Checkout</h3> *@
 
-@if (PaymentMethods != null)
-{
-    foreach (var method in PaymentMethods)
-    {
-        <button @onclick="() => ProceedToPayment(method)">@method.Description</button>
-    }
-}
-else
-{
-    <p>Loading available payment methods...</p>
-}
+    <div class="row">
+
+        <!-- Checkout form section -->
+        <div class="col-lg-6 bg-light p-5 d-flex flex-column">
+            <h2 class="text-center pb-3">Payment Information</h2>
+            <div class="card p-5 mx-auto border-0 shadow" style="max-width:600px;">
+                @if (PaymentMethods == null)
+                {
+                    <p><em>Loading payment methods...</em></p>
+                }
+                else if (PaymentMethods.Count == 0)
+                {
+                    <p><em>No payment methods returned.</em></p>
+                }
+                else
+                {
+                    <form @onsubmit="Proceed" class="bg-white p-4 rounded shadow-lg">
+                        <h2 class="text-center pb-3">Payment Information</h2>
+                        
+                        <div class="form-row mb-4">
+                            <div class="form-group col-md-6">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="First Name" required />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Last Name" required />
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="streetName">Street Name</label>
+                            <input type="text" class="form-control" id="streetName" placeholder="Street Name" required />
+                        </div>
+
+                        <div class="form-row mb-4">
+                            <div class="form-group col-md-3">
+                                <label for="zipCode">Zip Code</label>
+                                <input type="text" class="form-control" id="zipCode" placeholder="Zip" required />
+                            </div>
+                            <div class="form-group col-md-9">
+                                <label for="cityName">City</label>
+                                <input type="text" class="form-control" id="cityName" placeholder="City" required />
+                            </div>
+                        </div>
+
+                        <hr class="mb-4">
+
+                        <h2 class="text-center pb-3">Payment Method</h2>
+
+                        @foreach (var method in PaymentMethods)
+                        {
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" id="@method.Id" name="paymentMethod" value="@method.Id"
+                                       @onchange="() => { SetSelectedMethod(method.Id); }" />
+                                <img src="@GetLogoUrlByMethodId(method.Id)" alt="@method.Description logo" width="50" height="30" class="mr-2" />
+                                <label class="form-check-label" for="@method.Id">@method.Description</label>
+                            </div>
+                        }
+
+                        @if (selectedPaymentMethod == "ideal")
+                        {
+                            <div>
+                                <select id="issuer" class="form-control mt-3">
+                                    <option>Issuer</option>
+                                    <option value="ABN Amro">ABN Amro</option>
+                                    <option value="ASN Bank">ASN Bank</option>
+                                    <option value="Rabobank">Rabobank</option>
+                                    <option value="SNS Bank">SNS Bank</option>
+                                    <option value="ING">ING Bank</option>
+                                </select>
+                            </div>
+                        }
+
+                        @if (selectedPaymentMethod == "creditcard")
+                        {
+                            <div>
+                                <input placeholder="Card Number" type="text" class="form-control mt-4" required />
+                                <input placeholder="CSV" type="text" class="form-control mt-4" required />
+                                <input placeholder="Expiry Date (MM/YY)" type="text" class="form-control mt-4" required />
+                            </div>
+                        }
+
+                        @* <button type="submit" class="btn btn-primary" @onclick="EventCallback.Factory.Create(this, Proceed)">Proceed</button> *@
+                        <button type="submit" class="btn btn-primary" >Proceed</button>
+
+                    </form>
+                }
+            </div>
+            </div><!-- Cart content section -->
+                 <div class="col-lg-4 bg-white p-5 border-left">
+                     <h2 class="text-center pb-3">Cart Content</h2>
+         
+                     <div>
+                         <p>Item 1<span class="float-right">$10.00</span><span class="float-right mr-5">x2</span></p>
+                         <p>Item 2<span class="float-right">$20.50</span><span class="float-right mr-5">x3</span></p>
+                         <p>Item 3<span class="float-right">$30.90</span><span class="float-right mr-5">x1</span></p>
+         
+                         <hr />
+         
+                         <p>Subtotal<span class="float-right">$XXX.XX</span></p>
+                         <p>Tax<span class="float-right">$XX.XX</span></p>
+                         <p><strong>Total</strong><span class="float-right"><strong>$XXX.XX</strong></span></p>
+         
+                     </div>
+                 </div>
+         
+             </div>
+         </div>
+@* </div> *@
 
 @code {
-
     private List<PaymentMethodResponse> PaymentMethods;
+    private string selectedPaymentMethod;
 
-    protected override async Task OnInitializedAsync() 
+    protected async override Task OnInitializedAsync()
     {
-         await GetPaymentMethodsAsync();
-    }
-
-    private async Task GetPaymentMethodsAsync() 
-    {
-        try
         {
-            string mollieApiKey = Configuration["Mollie:ApiKey"];
-            
-            using var paymentMethodClient = new PaymentMethodClient(mollieApiKey, HttpClient);
-            var paymentMethodList = await paymentMethodClient.GetPaymentMethodListAsync();
+            var paymentMethodsResponse = await MollieService.GetPaymentMethodsAsync();
+            PaymentMethods = paymentMethodsResponse.Items;
 
-            var embeddedProperty = paymentMethodList.GetType().GetProperty("Embedded", BindingFlags.Public | BindingFlags.Instance);
-            if (embeddedProperty != null)
+            // Log each payment method's ID
+            foreach (var method in PaymentMethods)
             {
-                var embeddedPropertyValue = embeddedProperty.GetValue(paymentMethodList);
-                var paymentMethodProperty = embeddedPropertyValue.GetType().GetProperty("PaymentMethods", BindingFlags.Public | BindingFlags.Instance);
-
-                if(paymentMethodProperty != null)
-                {
-                    PaymentMethods = (List<PaymentMethodResponse>)paymentMethodProperty.GetValue(embeddedPropertyValue);
-                }
+                logger.LogInformation($"Payment Method ID: {method.Id}, Description: {method.Description}");
             }
         }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
     }
 
-    private async Task ProceedToPayment(PaymentMethodResponse method) 
+    private void SetSelectedMethod(string paymentMethod)
     {
-        if (method != null) 
+        selectedPaymentMethod = paymentMethod;
+        logger.LogInformation("SelectedPaymentMethod has been set to: " + selectedPaymentMethod);
+        StateHasChanged();
+    }   
+
+    private string GetLogoUrlByMethodId(string methodId)
+    {
+        return methodId switch
         {
-            string mollieApiKey = Configuration["Mollie:ApiKey"];
-            // Construct your ideal payment request
-            var paymentRequest = new PaymentRequest
+            "creditcard" => "https://quickpay.net/images/payment-methods/mastercard.png",
+            "ideal" => "https://quickpay.net/images/payment-methods/ideal.png",
+            "paypal" => "https://quickpay.net/images/payment-methods/paypal.png",
+            "bancontact" => "https://upload.wikimedia.org/wikipedia/commons/5/5c/Bancontact_logo.svg",
+            _ => string.Empty
+        };
+    }
+    
+    PaymentRequest paymentRequest;
+    @code {
+
+        public async Task Proceed()
+        {
+            var paymentRequest = new PaymentRequest 
             {
-                 Amount = new Amount(Currency.EUR, "100.00"),
-                 Description = "Test payment of the example project",
-                 RedirectUrl = "http://google.com",
-                 Method = method.Id
+                Amount = new Amount 
+                { 
+                    Currency = "EUR", 
+                    Value = "10.00" 
+                },
+                Description = "Order Description",  
+                RedirectUrl = "https://your-redirect-url.com"  
             };
 
-            // Initialize a new PaymentClient with your API key
-            using IPaymentClient paymentClient = new PaymentClient(mollieApiKey, HttpClient);
+            try
+            {
+                var paymentResponse = await MollieService.CreatePaymentAsync(paymentRequest);
+                Console.WriteLine($"Payment successful. Response: {JsonSerializer.Serialize(paymentResponse)}");
 
-            // Send request to Mollie API
-            var paymentResponse = await paymentClient.CreatePaymentAsync(paymentRequest);
-
-            // What you do next depends on the Mollie API and your app's needs...
-            // Redirect to the checkoutUrl?
+                //StateHasChanged();
+                navigationManager.NavigateTo("/Thankyou");
+            }
+            catch (Exception ex)
+            {
+                logger.LogError($"Failed to create the payment: {ex.Message}");
+                // Handle the exception, e.g., display an error message to the user
+            }
         }
     }
+    
 }
