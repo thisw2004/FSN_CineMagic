@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CineMagicBlazor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a758dca058073880976e0ceca7e968f6a340d92")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75f32508b16356c2c72c953b7b9d0d41ac2e23a7")]
 [assembly: System.Reflection.AssemblyProductAttribute("CineMagicBlazor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CineMagicBlazor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
