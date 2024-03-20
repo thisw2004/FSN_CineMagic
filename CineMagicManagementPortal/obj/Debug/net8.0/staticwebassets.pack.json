@@ -1,39 +1,39 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicManagementPortal\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CineMagicManagementPortal.bundle.scp.css",
+      "Id": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicManagementPortal\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CineMagicManagementPortal.bundle.scp.css",
       "PackagePath": "staticwebassets\\CineMagicManagementPortal.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicManagementPortal\\wwwroot\\Img\\Eng_flag.png",
+      "Id": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicManagementPortal\\wwwroot\\Img\\Eng_flag.png",
       "PackagePath": "staticwebassets\\Img\\Eng_flag.png"
     },
     {
-      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicManagementPortal\\wwwroot\\Img\\NL_flag.png",
+      "Id": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicManagementPortal\\wwwroot\\Img\\NL_flag.png",
       "PackagePath": "staticwebassets\\Img\\NL_flag.png"
     },
     {
-      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicManagementPortal\\wwwroot\\Img\\logo.png",
+      "Id": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicManagementPortal\\wwwroot\\Img\\logo.png",
       "PackagePath": "staticwebassets\\Img\\logo.png"
     },
     {
-      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicManagementPortal\\wwwroot\\app.css",
+      "Id": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicManagementPortal\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicManagementPortal\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicManagementPortal\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicManagementPortal\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicManagementPortal\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicManagementPortal\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicManagementPortal\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicManagementPortal\\wwwroot\\style.css",
+      "Id": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicManagementPortal\\wwwroot\\style.css",
       "PackagePath": "staticwebassets\\style.css"
     },
     {

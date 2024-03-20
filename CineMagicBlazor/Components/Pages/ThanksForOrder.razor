@@ -1,0 +1,94 @@
+﻿@page "/Thankyou"
+
+@using System.Collections.Generic
+@using System.Linq
+
+<h3>Thanks for Order!</h3>
+
+<div class="ticket-container">
+    <div class="order-summary">
+        <p>Thank you for your order!</p>
+        <div class="movie-details">
+            <p>Movie: @movieTitle</p>
+        </div>
+        @foreach (var ticket in tickets)
+        {
+            <div class="ticket-type">
+                <p>Ticket Type @ticket.Type - @ticket.Quantity x @ticket.Price per ticket</p>
+            </div>
+        }
+        <div class="total">
+            <p>Total: @totalTickets tickets - @totalPrice$ total price</p>
+        </div>
+    </div>
+    <div class="print-actions">
+        <button class="print-button">Print tickets</button>
+        <p>Or use the code below at the cinema:</p>
+        <p class="code">@cinemaCode</p> <!--CHANGE HERE-->
+    </div>
+</div>
+
+@code {
+    private string movieTitle = "Your Chosen Movie Title"; // Replace with actual movie title
+    private List<Ticket> tickets = new List<Ticket>()
+    {
+        new Ticket { Type = 1, Quantity = 3, Price = 10.00m }, // Updated prices
+        new Ticket { Type = 2, Quantity = 1, Price = 20.00m },
+        // ... add more ticket types as needed
+    };
+    private int totalTickets => tickets.Sum(t => t.Quantity); // Compute total tickets dynamically
+    private decimal totalPrice => tickets.Sum(t => t.Quantity * t.Price); // Compute total price dynamically
+    private string cinemaCode = "123456"; // Cinema code  /*CHANGE HERE*/
+
+    public class Ticket
+    {
+        public int Type { get; set; }
+        public int Quantity { get; set; }
+        public decimal Price { get; set; }
+    }
+}
+
+<style>
+.ticket-container {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.order-summary {
+    margin-bottom: 2rem;
+}
+
+.movie-details, .ticket-type, .total {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.print-actions {
+    text-align: center;
+}
+
+.print-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.print-button:hover {
+    background-color: #0056b3;
+}
+
+.code {
+    color: #007BFF;
+    font-size: 2rem;
+    font-weight: bold;
+}
+</style>
