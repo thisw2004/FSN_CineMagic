@@ -1,4 +1,5 @@
-﻿@inherits LayoutComponentBase
+﻿@inject IHostEnvironment HostEnvironment
+@inherits LayoutComponentBase
 <link rel="stylesheet" type="text/css" href="style.css"/>
 <div class="page" id="body">
     
@@ -23,19 +24,23 @@
                 <img src="Img/location.png" style="width:100px; height: 50px; float: right; margin-top: -240px; margin-right: 20px;" />
             </a>
             
-            
-            
-            
         </div>    
         
-        <article class="content"  style="margin-top:300px;padding:0px; ">
+        <article class="content"  style="margin-top:0px;padding:0px;  ">
             @Body
         </article>
     </main>
 </div>
 
-<div id="blazor-error-ui">
-    An unhandled error has occurred.
+@*<div id="blazor-error-ui" data-nosnippet>
+    @if (HostEnvironment.IsProduction())
+    {
+        <span>An error has occurred.</span>
+    }
+    else
+    {
+        <span>An unhandled exception occurred.</span>
+    }
     <a href="" class="reload">Reload</a>
     <a class="dismiss">🗙</a>
-</div>
+</div>*@

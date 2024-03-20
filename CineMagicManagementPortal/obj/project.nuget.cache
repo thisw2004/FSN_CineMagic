@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OY/tC9PmtE1Hzz4c46o9HrWuTomSYwwl20A0BAP0DwkqXRsBtJtcfq0oFn0XIMfpWCGXjnQ2znFsJ6B2eegDlQ==",
+  "dgSpecHash": "DR3OtZTLJEwQopHCMU/q8lmeMEpMTsjj/CWkImS1NGns+HCXDm6H8dsaPNnsrorzFG88IBR2pRpDwI0cjbaqsw==",
   "success": true,
   "projectFilePath": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicManagementPortal\\CineMagicManagementPortal.csproj",
   "expectedPackageFiles": [
@@ -36,6 +36,7 @@
     "C:\\Users\\thirz\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\thirz\\.nuget\\packages\\mysql.data\\8.3.0\\mysql.data.8.3.0.nupkg.sha512",
     "C:\\Users\\thirz\\.nuget\\packages\\mysql.entityframeworkcore\\8.0.0\\mysql.entityframeworkcore.8.0.0.nupkg.sha512",
+    "C:\\Users\\thirz\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\thirz\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\thirz\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\thirz\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",

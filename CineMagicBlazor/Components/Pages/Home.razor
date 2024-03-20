@@ -1,5 +1,11 @@
 ﻿<!-- FilmListings.razor -->
 @page "/"
+@rendermode InteractiveServer
+@using CineMagicData.Models
+@using CineMagicBlazor.Services
+@inject MovieService MovieService
+@inject NavigationManager NavigationManager
+<PageTitle>Home</PageTitle>
 <style>
     /* Reset some default styling */
     * {
@@ -17,10 +23,14 @@
     /* Sidebar styling */
     .filter-sidebar {
       width: 200px; /* Adjust the width of the sidebar to your preference */
-      background-color: #f5f5f5; /* Light grey background */
+      /*
+      background-color: #666363; !* Light grey background *!
+      */
       height: 100vh; /* Full height of the viewport */
       padding: 20px; /* Padding around the filter items */
       overflow-y: auto; /* Enable scrolling if content is taller than the screen */
+      border-radius: 10px;
+      
     }
     
     /* Film listing styling */
@@ -34,9 +44,12 @@
     
     /* Film card styling */
     .film-card {
-      border: 1px solid #ddd; /* Light grey border */
+      /*
+      border: 1px solid #ddd; !* Light grey border *!
+      */
       position: relative;
       overflow: hidden; /* Ensure that content does not overflow */
+      border-radius: 5px;;
     }
     
     .film-card img {
@@ -47,7 +60,8 @@
     /* Basic info styling */
     .film-info {
       padding: 10px;
-      background: #ffffff; /* White background */
+      background: #666363; /* White background */
+      color: white;
     }
     
     /* Expand button styling */
@@ -105,63 +119,82 @@
 
 </script>
 
-<div class="filter-sidebar">
+<div class="filter-sidebar" style="margin-top:100px;height: 1010px;">
     <!-- Filter options go here -->
-    <div>
+    <div style="background-color:#666363;  color:white; border-radius: 10px;">
         <label class="form-label" for="search">Search</label>
-        <input class="form-control" name="search" id="search"/>
+        <input @bind="searchTerm" class="form-control" name="search" id="search"/>
     </div>
-    
-    <div>Filter 2</div>
-    <div>Filter 3</div>
+     <div style="background-color:#666363;  color:white; border-radius: 10px;">
+            <label class="form-label" for="pegiRating">Age rating</label>
+            <select @bind="pegi" class="form-control" id="pegiRating">
+                <option value="" selected>all</option>
+                <option value="3">3</option>
+                <option value="7">7</option>
+                <option value="12">12</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+            </select>
+     </div>       
+    <div style="background-color:#666363;  color:white; border-radius: 10px;">
+        <label class="form-label" for="ageRating">Age rating</label>
+        <select @bind="genre" class="form-control" id="ageRating">
+            <option value="" selected>all</option>
+            <option value="horror">horror</option>
+            <option value="romantic">romantic</option>
+            <option value="comedy">comedy</option>
+        </select>
+    </div>
+    <div style="background-color:#666363;  color:white; border-radius: 10px;">
+        <button @onclick="SearchMovies" class="btn btn-primary">Zoek</button>
+    </div>    
 </div>
 
-<section class="film-listing">
+<section style="margin-left: 200px; margin-top: -975px !important; border-radius: 10px; " class="film-listing">
     <!-- Demo film card -->
-    @foreach (var film in Films)
+    @foreach (var movie in _movies)
     {
         <div class="film-card">
-            <img src="https://via.placeholder.com/200" alt="Demo Film Image">
+            <img src="@movie.Image" alt="Demo Film Image">
             <div class="film-info">
-                <h3>@film.Title</h3>
-                <p>@film.Description</p>
+                <h3>@movie.Title</h3>
+                <p>@movie.Description</p>
+                <button type="button" @onclick="() => { NavigateTo(movie.Id); }" class="btn btn-primary">Info</button>
             </div>
-            <button class="expand-details" @onclick="() => ToggleDetails(film)">+</button>
-            <div class="additional-details" style="@film.DetailsStyle">
-                <p>Director: @film.Director</p>
-                <p>Cast: @film.Cast</p>
+            <button class="expand-details" @onclick="() => ToggleDetails(movie)">+</button>
+            <div class="additional-details" style="">
+                <p>Director: </p>
+                <p>Cast: </p>
             </div>
         </div>
     }
-
-    </section>
+</section>
 
 @code {
-    // Define a class for the film
-    public class Film
+    List<Movie> _movies = new List<Movie>();
+
+    private string searchTerm = ""; 
+    private string pegi = ""; 
+    private string genre = ""; 
+    
+    protected override async Task OnInitializedAsync()
     {
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public string Director { get; set; }
-        public string Cast { get; set; }
-        public bool IsExpanded { get; set; }
-        public string DetailsStyle => IsExpanded ? "display: block;" : "display: none;";
+        _movies = (await MovieService.GetAllMovies()).ToList();
     }
 
-    // Define some sample films
-    List<Film> Films = new List<Film>
-    {
-        new Film { Title = "Film Title 1", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" },
-        new Film { Title = "Film Title 2", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" },
-        new Film { Title = "Film Title 3", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" },
-        new Film { Title = "Film Title 4", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" },
-        new Film { Title = "Film Title 5", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" },
-        new Film { Title = "Film Title 6", Description = "Some description...", Director = "John Doe", Cast = "Jane Doe, John Smith" }
-    };
-
     // Method to toggle the details visibility
-    void ToggleDetails(Film film)
+    void ToggleDetails(Movie movie)
     {
-        film.IsExpanded = !film.IsExpanded;
+        // movie.IsExpanded = !movie.IsExpanded;
+    }
+
+    public void NavigateTo(int id)
+    {
+        NavigationManager.NavigateTo($"film-details/{id}");
+    }
+
+    protected async Task SearchMovies()
+    {
+        _movies = (await MovieService.SearchMovies(searchTerm, pegi, genre)).ToList();
     }
 }
