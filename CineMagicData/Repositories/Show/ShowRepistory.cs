@@ -40,6 +40,7 @@ public class ShowRepistory : IShowRepistory
         var shows =  await _ctx.RoomMovie
             .Where(rm => rm.DateTime >= today )
             .Where(rm => rm.DateTime <= wednesday)
+            .OrderBy(show => show.DateTime)
             .ToListAsync();
         
         var groupedShows = shows

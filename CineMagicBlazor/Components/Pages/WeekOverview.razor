@@ -4,38 +4,28 @@
 @inject ShowService ShowService
 @rendermode InteractiveServer
 
-<h3>WeekOverview</h3>
+<h3>Week Overview</h3>
 
-<div class="bg-white">
+<div class="text-white">
     <div>
-        <h4>
-            Huidige datum - tot week daarna woensdag
-        </h4>
-        <div class="border border-black ">
+        <div class="border border-white rounded">
             @foreach(var date in _shows)
             {
-                @foreach (var show in date.Shows)
-                {
-                    <p>@show.Id , @show.Room.Id , @show.Movie.Id</p>
-                }
+                <div class="d-flex gap-3">
+                    <div>
+                        @date.DateTime.Date.ToString("dd-MM-yyyy") :
+                    </div>
+                    @foreach (var show in date.Shows)
+                    {
+                        <div class="border-end border-white">
+                            @show.Movie.Title : @show.DateTime.ToString("HH:mm"), Zaal nummer: @show.Room.room_number
+                        </div>
+                    }
+                    
+                </div>
             }
-            alle dagen
-            <div class="d-flex gap-3">
-                Donderdag 14
-                <div>
-                    shows
-                </div>
-                <div>
-                    shows
-                </div>
-                <div>
-                    shows
-                </div>
-            </div>
-
         </div>
     </div>
-    <button @onclick="setDates"></button>
 </div>
 
 @code {
