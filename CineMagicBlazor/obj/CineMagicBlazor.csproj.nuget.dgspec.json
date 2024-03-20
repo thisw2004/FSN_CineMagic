@@ -1,41 +1,40 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\CineMagicBlazor.csproj": {}
+    "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicBlazor\\CineMagicBlazor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicApi\\CineMagicApi.csproj": {
+    "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicApi\\CineMagicApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicApi\\CineMagicApi.csproj",
+        "projectUniqueName": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicApi\\CineMagicApi.csproj",
         "projectName": "CineMagicApi",
-        "projectPath": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicApi\\CineMagicApi.csproj",
-        "packagesPath": "C:\\Users\\Joey1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicApi\\obj\\",
+        "projectPath": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicApi\\CineMagicApi.csproj",
+        "packagesPath": "C:\\Users\\thirz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Joey1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thirz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicData\\CineMagicData.csproj": {
-                "projectPath": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicData\\CineMagicData.csproj"
+              "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicData\\CineMagicData.csproj": {
+                "projectPath": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicData\\CineMagicData.csproj"
               }
             }
           }
@@ -82,42 +81,41 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\CineMagicBlazor.csproj": {
+    "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicBlazor\\CineMagicBlazor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\CineMagicBlazor.csproj",
+        "projectUniqueName": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicBlazor\\CineMagicBlazor.csproj",
         "projectName": "CineMagicBlazor",
-        "projectPath": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\CineMagicBlazor.csproj",
-        "packagesPath": "C:\\Users\\Joey1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\obj\\",
+        "projectPath": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicBlazor\\CineMagicBlazor.csproj",
+        "packagesPath": "C:\\Users\\thirz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicBlazor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Joey1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thirz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicApi\\CineMagicApi.csproj": {
-                "projectPath": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicApi\\CineMagicApi.csproj"
+              "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicApi\\CineMagicApi.csproj": {
+                "projectPath": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicApi\\CineMagicApi.csproj"
               }
             }
           }
@@ -160,34 +158,33 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicData\\CineMagicData.csproj": {
+    "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicData\\CineMagicData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicData\\CineMagicData.csproj",
+        "projectUniqueName": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicData\\CineMagicData.csproj",
         "projectName": "CineMagicData",
-        "projectPath": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicData\\CineMagicData.csproj",
-        "packagesPath": "C:\\Users\\Joey1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Joey1\\RiderProjects\\FSN_CineMagic\\CineMagicData\\obj\\",
+        "projectPath": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicData\\CineMagicData.csproj",
+        "packagesPath": "C:\\Users\\thirz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicData\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Joey1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thirz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -275,7 +272,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
