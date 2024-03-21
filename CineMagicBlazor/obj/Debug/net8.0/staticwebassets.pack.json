@@ -49,6 +49,18 @@
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
     {
+      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicBlazor\\wwwroot\\img\\poster1.jpg",
+      "PackagePath": "staticwebassets\\img\\poster1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicBlazor\\wwwroot\\img\\poster2.jpg",
+      "PackagePath": "staticwebassets\\img\\poster2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicBlazor\\wwwroot\\img\\poster3.jpg",
+      "PackagePath": "staticwebassets\\img\\poster3.jpg"
+    },
+    {
       "Id": "C:\\Users\\thirz\\source\\repos\\CineMagic\\CineMagicBlazor\\wwwroot\\img\\x.png",
       "PackagePath": "staticwebassets\\img\\x.png"
     },

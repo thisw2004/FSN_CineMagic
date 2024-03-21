@@ -4,24 +4,25 @@
 @inject ShowService ShowService
 @rendermode InteractiveServer
 
-<h3>Week Overview</h3>
+<h2 style=" margin: 0 auto;margin-top:150px; width: 300px; background-color:cornflowerblue; text-align: center;">Week Overview</h2>
 
 <div class="text-white">
     <div>
-        <div class="border border-white rounded">
-            @foreach(var date in _shows)
+        <p style="font-weight: bold; margin-left:900px; margin-top: 20px;">Deze week:</p>
+        <div>
+            @foreach (var date in _shows)
             {
-                <div class="d-flex gap-3">
-                    <div>
-                        @date.DateTime.Date.ToString("dd-MM-yyyy") :
+                <div class="d-flex gap-3" style="border:none;">
+                    <div style="text-align:center; margin-left: 800px; margin-top: 20px; border: none;">
+                        @date.DateTime.Date.ToString("dd-MM-yyyy")  -
                     </div>
                     @foreach (var show in date.Shows)
                     {
-                        <div class="border-end border-white">
-                            @show.Movie.Title : @show.DateTime.ToString("HH:mm"), Zaal nummer: @show.Room.room_number
+                        <div style="margin-top:20px; border: none; ">
+                            @show.Movie.Title om @show.DateTime.ToString("HH:mm") in zaal @show.Room.room_number
                         </div>
                     }
-                    
+
                 </div>
             }
         </div>

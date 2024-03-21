@@ -3,17 +3,17 @@
 @using CineMagicBlazor.Services
 @inject MovieService MovieService
 
-<div style="background-color: #ff961d; height: 20vh; width: 100%;">
-    <!-- TODO: Voeg het logo hier toe -->
-</div>
+
 
 <div style="padding-top: 30px; padding-left: 80px; display: flex;">
-    <div style="text-align: center; width: 70%;">
+    <div style="text-align: center; width: 70%; margin-top: 100px;">
+        <img src="./img/poster1.jpg" height:200px; width:100px; />
         <h1>@_movie.Title</h1>
         <div style="text-align: center;">
             <p>@_movie.Description</p>
             <!-- You can bind the text dynamically to a property in your code behind -->
         </div>
+        <button><a href="/checkout">Checkout</a></button>
     </div>
     <div style="width: 30%;">
         <!-- Add any additional content here if needed -->

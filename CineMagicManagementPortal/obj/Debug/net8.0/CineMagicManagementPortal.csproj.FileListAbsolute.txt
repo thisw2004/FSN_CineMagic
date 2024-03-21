@@ -259,3 +259,7 @@ C:\Users\Joey1\RiderProjects\FSN_CineMagic\CineMagicManagementPortal\obj\Debug\n
 C:\Users\Joey1\RiderProjects\FSN_CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\CineMagicManagementPortal.pdb
 C:\Users\Joey1\RiderProjects\FSN_CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\CineMagicManagementPortal.genruntimeconfig.cache
 C:\Users\Joey1\RiderProjects\FSN_CineMagic\CineMagicManagementPortal\obj\Debug\net8.0\ref\CineMagicManagementPortal.dll
+C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\bin\Debug\net8.0\Microsoft.Extensions.Http.Polly.dll
+C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\bin\Debug\net8.0\Mollie.Api.dll
+C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\bin\Debug\net8.0\Polly.dll
+C:\Users\thirz\source\repos\CineMagic\CineMagicManagementPortal\bin\Debug\net8.0\Polly.Extensions.Http.dll

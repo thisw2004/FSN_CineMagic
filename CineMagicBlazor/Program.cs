@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-builder.Services.AddHttpClient<CineMagicBlazor.Services.MovieService>(client =>
+
 builder.Services.Configure<CircuitOptions>(options =>  // update this
 {
     options.DisconnectedCircuitMaxRetained = 100;
@@ -29,7 +29,7 @@ builder.Services.AddHttpClient<CineMagicBlazor.Services.RoomService>(client =>
 
 builder.Services.AddHttpClient<CineMagicBlazor.Services.ShowService>(client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5254/");
+    client.BaseAddress = new Uri("http://localhost:5138/");
 });
 
 builder.Services.AddHttpClient<MolliePaymentService>(molliePaymentService =>
