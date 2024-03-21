@@ -116,6 +116,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Mollie.Api": {
+              "target": "Package",
+              "version": "[3.5.1, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
