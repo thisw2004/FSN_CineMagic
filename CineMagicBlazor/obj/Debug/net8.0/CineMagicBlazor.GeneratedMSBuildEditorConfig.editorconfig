@@ -9,111 +9,111 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CineMagicBlazor
 build_property.RootNamespace = CineMagicBlazor
-build_property.ProjectDir = /Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/
+build_property.ProjectDir = C:\Users\thirz\source\repos\CineMagic\CineMagicBlazor\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor
+build_property.MSBuildProjectDirectory = C:\Users\thirz\source\repos\CineMagic\CineMagicBlazor
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/App.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9BcHAucmF6b3I=
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/AddMovies.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9BZGRNb3ZpZXMucmF6b3I=
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Pages/AddMovies.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZGRNb3ZpZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/Addroom.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9BZGRyb29tLnJhem9y
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Pages/Addroom.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZGRyb29tLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/AddShow.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9BZGRTaG93LnJhem9y
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Pages/AddShow.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZGRTaG93LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/BasePagesThirza/Pages/ConfirmOrder.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9CYXNlUGFnZXNUaGlyemEvUGFnZXMvQ29uZmlybU9yZGVyLnJhem9y
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Pages/BasePagesThirza/Pages/ConfirmOrder.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCYXNlUGFnZXNUaGlyemFcUGFnZXNcQ29uZmlybU9yZGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/BasePagesThirza/Pages/FilmDetail.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9CYXNlUGFnZXNUaGlyemEvUGFnZXMvRmlsbURldGFpbC5yYXpvcg==
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Pages/BasePagesThirza/Pages/FilmDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCYXNlUGFnZXNUaGlyemFcUGFnZXNcRmlsbURldGFpbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/BasePagesThirza/Pages/PinSim.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9CYXNlUGFnZXNUaGlyemEvUGFnZXMvUGluU2ltLnJhem9y
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Pages/BasePagesThirza/Pages/PinSim.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCYXNlUGFnZXNUaGlyemFcUGFnZXNcUGluU2ltLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/BasePagesThirza/Pages/Redirect.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9CYXNlUGFnZXNUaGlyemEvUGFnZXMvUmVkaXJlY3QucmF6b3I=
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Pages/BasePagesThirza/Pages/Redirect.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCYXNlUGFnZXNUaGlyemFcUGFnZXNcUmVkaXJlY3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/BasePagesThirza/Pages/Route.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9CYXNlUGFnZXNUaGlyemEvUGFnZXMvUm91dGUucmF6b3I=
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Pages/BasePagesThirza/Pages/Route.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCYXNlUGFnZXNUaGlyemFcUGFnZXNcUm91dGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/BasePagesThirza/Pages/SelectPlaces.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9CYXNlUGFnZXNUaGlyemEvUGFnZXMvU2VsZWN0UGxhY2VzLnJhem9y
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Pages/BasePagesThirza/Pages/SelectPlaces.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCYXNlUGFnZXNUaGlyemFcUGFnZXNcU2VsZWN0UGxhY2VzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/BasePagesThirza/Pages/SelectTickets.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9CYXNlUGFnZXNUaGlyemEvUGFnZXMvU2VsZWN0VGlja2V0cy5yYXpvcg==
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Pages/BasePagesThirza/Pages/SelectTickets.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCYXNlUGFnZXNUaGlyemFcUGFnZXNcU2VsZWN0VGlja2V0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/BasePagesThirza/Pages/ThanksForOrder.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9CYXNlUGFnZXNUaGlyemEvUGFnZXMvVGhhbmtzRm9yT3JkZXIucmF6b3I=
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Pages/BasePagesThirza/Pages/ThanksForOrder.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCYXNlUGFnZXNUaGlyemFcUGFnZXNcVGhhbmtzRm9yT3JkZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/Checkout.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9DaGVja291dC5yYXpvcg==
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Pages/Checkout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDaGVja291dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Db3VudGVyLnJhem9y
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/Error.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9FcnJvci5yYXpvcg==
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/FilmDetail.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9GaWxtRGV0YWlsLnJhem9y
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Pages/FilmDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xGaWxtRGV0YWlsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ib21lLnJhem9y
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/HomeData.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ib21lRGF0YS5yYXpvcg==
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Pages/HomeData.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lRGF0YS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/ThanksForOrder.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9UaGFua3NGb3JPcmRlci5yYXpvcg==
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Pages/ThanksForOrder.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUaGFua3NGb3JPcmRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9XZWF0aGVyLnJhem9y
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Pages/Weather.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/WeekOverview.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9XZWVrT3ZlcnZpZXcucmF6b3I=
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Pages/WeekOverview.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWVrT3ZlcnZpZXcucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Routes.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Sb3V0ZXMucmF6b3I=
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/_Imports.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9fSW1wb3J0cy5yYXpvcg==
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Layout/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTWFpbkxheW91dC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-gn0wrqwu90
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-2rlityigp4
 
-[/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Layout/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTmF2TWVudS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-7pq52xlkqs
+[C:/Users/thirz/source/repos/CineMagic/CineMagicBlazor/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-28g9nvpyq5
