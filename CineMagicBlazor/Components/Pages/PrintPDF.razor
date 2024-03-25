@@ -1,0 +1,202 @@
+@page "/PrintPDF"
+
+<head>  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator/qrcode.js"></script>
+</head>
+
+<div class="container">
+  <h3>Kung Fu Panda 4</h3>
+  <strong>Rij:</strong> 6<br>
+  <strong>Stoel:</strong> 18<br>
+  <strong>Date:</strong>
+  <div class="display-date">
+    <span id="day">day</span>,
+    <span id="daynum">00</span>
+    <span id="month">month</span>
+    <span id="year">0000</span>
+  </div>
+  <div class="display-time"></div><br>
+  <strong>Locatie:</strong> Hogeschoollaan 1, 4818 CR Breda<br>
+  <br>
+  <div class="main">
+    <div class="Container">
+      <div class="inner">
+        <div id="qr"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+@code {
+    
+}
+<script>
+
+ 
+const displayTime = document.querySelector(".display-time");
+// Time
+function showTime() {
+  let time = new Date();
+  displayTime.innerText = time.toLocaleTimeString("en-US", { hour12: false });
+  setTimeout(showTime, 1000);
+}
+
+showTime();
+
+// Date
+function updateDate() {
+  let today = new Date();
+
+  // return number
+  let dayName = today.getDay(),
+    dayNum = today.getDate(),
+    month = today.getMonth(),
+    year = today.getFullYear();
+
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const dayWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  // value -> ID of the html element
+  const IDCollection = ["day", "daynum", "month", "year"];
+  // return value array with number as a index
+  const val = [dayWeek[dayName], dayNum, months[month], year];
+  for (let i = 0; i < IDCollection.length; i++) {
+    document.getElementById(IDCollection[i]).firstChild.nodeValue = val[i];
+  }
+}
+
+updateDate();
+
+</script>
+
+<!---- QR --->
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script>
+  const qrData = "https://akdeepknowledge.com/";
+  const qrContainer = document.getElementById("qr");
+  new QRCode(qrContainer, qrData);
+  function runs() {
+    const a = document.getElementById("user_input").value;
+    const urlRegex = /^(https?:\/\/)?([\w\d-]+\.)+[\w\d]{2,}(\/[\w\d-./?%&=]*)?$/i;
+    const inputValue = user_input.value.trim();
+    if (a == "") {
+      document.getElementById("dis").innerHTML = "Please Enter URL";
+    } else if (!urlRegex.test(inputValue)) {
+      document.getElementById("dis").innerHTML = "Please Enter Valid URL";
+    } else {
+      document.getElementById("dis").innerHTML = "";
+      const qrData = document.getElementById("user_input").value; // QR Data
+      const qrContainer = document.getElementById("qr"); // QR Container
+      qrContainer.innerHTML = "";
+      new QRCode(qrContainer, qrData);
+      document.getElementById("Down_btn").style.display = "block";
+    }
+  }
+  
+  function downloadQRCode() {
+    const qrCode = document.querySelector("#qr canvas");
+    const qrCodeImage = qrCode.toDataURL("image/png");
+  
+    const canvasBackground = document.createElement("canvas");
+    const canvasContext = canvasBackground.getContext("2d");
+    canvasBackground.width = qrCode.width + 50;
+    canvasBackground.height = qrCode.height + 50;
+    canvasContext.fillStyle = "transparent";
+    canvasContext.fillRect(0, 0, canvasBackground.width, canvasBackground.height);
+    const borderWidth = 20;
+    canvasContext.lineWidth = borderWidth;
+    canvasContext.strokeStyle = "white";
+    canvasContext.strokeRect(
+      borderWidth / 2,
+      borderWidth / 2,
+      canvasBackground.width - borderWidth,
+      canvasBackground.height - borderWidth
+    );
+  
+    const image = new Image();
+    image.src = qrCodeImage;
+    image.onload = () => {
+      canvasContext.drawImage(
+        image,
+        borderWidth / 2,
+        borderWidth / 2,
+        canvasBackground.width - borderWidth,
+        canvasBackground.height - borderWidth
+      );
+  
+      const a = document.createElement("a");
+      a.href = canvasBackground.toDataURL("image/png");
+      a.download = "qr-code.png";
+      a.click();
+  
+      canvasBackground.remove();
+    };
+  }
+
+  
+</script>
+
+   
+<script>window.print();</script>
+
+
+  
+<main>
+    @* @foreach (var ticket in model.Order) { *@
+    @*     <div class="ticket"> *@
+    @*         @{var movietime = ticket.MovieTime;} *@
+    @*         <span class="bold">@movietime.Movie.Name</span> *@
+    @*         <span>@movietime.Hall.Venue.Name - Hall @movietime.Hall.HallNumber</span> *@
+    @*         $1$ <span>@Html.DisplayFor(modelItem => movietime.MovieDate)</span> #1# *@
+    @*         <hr> *@
+    @* *@
+    @*         @if (ticket.SeatingReservation != null) *@
+    @*         { *@
+    @*             <div class="seatingreservation"> *@
+    @*                 <span>Rij: @ticket.SeatingReservation.Row</span> *@
+    @*                 <span>Stoel: @ticket.SeatingReservation.Number</span> *@
+    @*             </div> *@
+    @*         } *@
+    @*         <span> *@
+    @*             @ticket.Rate.Name *@
+    @*             @foreach (var specialrate in ticket.SpecialRates) *@
+    @*             { *@
+    @*                 @specialrate.Name *@
+    @*             } *@
+    @*         </span> *@
+    @*         <span class="ticketid">@ticket.Id</span> *@
+    @*         <hr class="dotted" /> *@
+    @* *@
+    @*         @foreach (var arrangement in ticket.Arrangements) *@
+    @*         { *@
+    @*             <span>@arrangement.Name - @ticket.Id</span> *@
+    @*             <hr class="dotted" /> *@
+    @*         } *@
+    @*         <span>Toegang @ticket.Id</span> *@
+    @*     </div> *@
+    @* } *@
+</main>

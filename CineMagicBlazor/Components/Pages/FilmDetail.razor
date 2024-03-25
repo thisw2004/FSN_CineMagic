@@ -2,7 +2,18 @@
 @using CineMagicData.Models
 @using CineMagicBlazor.Services
 @inject MovieService MovieService
-
+<style>
+    .button {
+                margin: 0 10px;
+                padding: 10px 20px;
+                background-color: #9f2020;
+                color: white;
+                border: none;
+                border-radius: 30px;
+                cursor: pointer;
+                height: 75px;
+    }
+</style>
 
 
 <div style="padding-top: 30px; padding-left: 80px; display: flex;">
@@ -11,12 +22,14 @@
         <h1>@_movie.Title</h1>
         <div style="text-align: center;">
             <p>@_movie.Description</p>
+             <button><a href="./">Back</a></button>
             <!-- You can bind the text dynamically to a property in your code behind -->
         </div>
-        <button><a href="/checkout">Checkout</a></button>
+        <button ><a href="/checkout">Checkout</a></button>
     </div>
     <div style="width: 30%;">
         <!-- Add any additional content here if needed -->
+       
     </div>
 </div>
 
