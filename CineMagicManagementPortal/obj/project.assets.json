@@ -3815,38 +3815,45 @@
     ]
   },
   "packageFolders": {
-    "/Users/jorikvanmaaren/.nuget/packages/": {}
+    "C:\\Users\\jorik\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicManagementPortal/CineMagicManagementPortal.csproj",
+      "projectUniqueName": "C:\\Users\\jorik\\RiderProjects\\FSN_CineMagic\\CineMagicManagementPortal\\CineMagicManagementPortal.csproj",
       "projectName": "CineMagicManagementPortal",
-      "projectPath": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicManagementPortal/CineMagicManagementPortal.csproj",
-      "packagesPath": "/Users/jorikvanmaaren/.nuget/packages/",
-      "outputPath": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicManagementPortal/obj/",
+      "projectPath": "C:\\Users\\jorik\\RiderProjects\\FSN_CineMagic\\CineMagicManagementPortal\\CineMagicManagementPortal.csproj",
+      "packagesPath": "C:\\Users\\jorik\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jorik\\RiderProjects\\FSN_CineMagic\\CineMagicManagementPortal\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/jorikvanmaaren/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\jorik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicApi/CineMagicApi.csproj": {
-              "projectPath": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicApi/CineMagicApi.csproj"
+            "C:\\Users\\jorik\\RiderProjects\\FSN_CineMagic\\CineMagicApi\\CineMagicApi.csproj": {
+              "projectPath": "C:\\Users\\jorik\\RiderProjects\\FSN_CineMagic\\CineMagicApi\\CineMagicApi.csproj"
             },
-            "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/CineMagicBlazor.csproj": {
-              "projectPath": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicBlazor/CineMagicBlazor.csproj"
+            "C:\\Users\\jorik\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\CineMagicBlazor.csproj": {
+              "projectPath": "C:\\Users\\jorik\\RiderProjects\\FSN_CineMagic\\CineMagicBlazor\\CineMagicBlazor.csproj"
             },
-            "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicData/CineMagicData.csproj": {
-              "projectPath": "/Users/jorikvanmaaren/RiderProjects/FSN_CineMagic/CineMagicData/CineMagicData.csproj"
+            "C:\\Users\\jorik\\RiderProjects\\FSN_CineMagic\\CineMagicData\\CineMagicData.csproj": {
+              "projectPath": "C:\\Users\\jorik\\RiderProjects\\FSN_CineMagic\\CineMagicData\\CineMagicData.csproj"
             }
           }
         }
@@ -3879,7 +3886,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

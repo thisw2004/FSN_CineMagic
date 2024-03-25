@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CineMagicManagementPortal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d8d1e06fab31b319ad69da645baa3c3ed2c5198")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ed1a23bbb42ff2d8fa3c49c1f1c2a082cf29199")]
 [assembly: System.Reflection.AssemblyProductAttribute("CineMagicManagementPortal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CineMagicManagementPortal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
