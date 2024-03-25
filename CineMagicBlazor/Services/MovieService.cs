@@ -20,23 +20,6 @@ public class MovieService
         return movies ?? new List<Movie>();
     }
     
-    // public async Task<HttpResponseMessage> AddMovie(Movie movie)
-    // {
-    //     var jsonMovieContent = JsonSerializer.Serialize(movie);
-    //     var jsonMovie = new StringContent(jsonMovieContent, Encoding.UTF8, "application/json");
-    //
-    //     HttpResponseMessage result = await _httpClient.PostAsync("api/movies/add", jsonMovie);
-    //
-    //     if (!result.IsSuccessStatusCode)
-    //     {
-    //         var error = await result.Content.ReadAsStringAsync();
-    //         throw new Exception($"Error calling API. Status: {result.StatusCode}. Error: {error}");
-    //     }
-    //
-    //     return result;
-    // }
-    
-    
     public async Task<HttpResponseMessage> AddMovie(Movie movie)
     {
         return await _httpClient.PostAsJsonAsync("api/movies/add", movie);

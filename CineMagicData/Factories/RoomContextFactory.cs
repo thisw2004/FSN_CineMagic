@@ -9,10 +9,9 @@ public class RoomContextFactory : IDesignTimeDbContextFactory<Contexts.RoomConte
     
     public Contexts.RoomContext CreateDbContext(string[] args)
     {
-        // Up to the solution directory
+        //Getting api directory
         var solutionPath = Path.Combine(Directory.GetCurrentDirectory(), "..");
 
-        // Navigate to the CineMagicApi project directory
         var projectPath = Path.Combine(solutionPath, "CineMagicApi");
 
         IConfigurationRoot configuration = new ConfigurationBuilder()
@@ -20,8 +19,7 @@ public class RoomContextFactory : IDesignTimeDbContextFactory<Contexts.RoomConte
             .AddJsonFile("appsettings.json")
             .Build();
 
-        // var connectionString = configuration.GetConnectionString("DefaultConnection");
-
+        //Returning to context
         return new Contexts.RoomContext(configuration);
     }
 }

@@ -3,16 +3,14 @@
 <h3>Select Tickets</h3>
 
 <div class="seating-chart">
-    <!-- Display the seating chart here -->
-    <!-- You can use CSS grid or any other layout technique -->
-    <!-- For simplicity, let's assume a 5x5 grid -->
+    
     @for (int row = 1; row <= 5; row++)
     {
         <div class="row">
             @for (int seat = 1; seat <= 5; seat++)
             {
                 <button @onclick="() => SelectSeat(row, seat)">
-                    @($"{row}-{seat}") <!-- Display seat number -->
+                    @($"{row}-{seat}") 
                 </button>
             }
         </div>
@@ -48,6 +46,5 @@
     void OrderTickets()
     {
         // Implement ticket ordering logic here
-        // You can navigate to a confirmation page or perform any other action
     }
 }

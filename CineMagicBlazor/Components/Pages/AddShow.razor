@@ -14,24 +14,21 @@
         <div class="mb-3">
             <label for="roomNumber" class="form-label">Room Number</label>
             <select @bind="Show.RoomId" class="form-control" id="roomNumber">
-                @* Populate this list with actual room numbers from your database or a predefined list *@
+                @* List of rooms *@
                 @foreach (var room in _rooms)
                 {
                     <option value="@room.Id">@room.room_number</option>
                 }
-                
-                <!-- More room options -->
             </select>
         </div>
         <div class="mb-3">
             <label for="filmTitle" class="form-label">Film Title</label>
             <select @bind="Show.MovieId" class="form-control" id="filmTitle">
-                @* Populate this list with actual film titles from your database or a predefined list *@
+                @* List of movies *@
                 @foreach (var movie in _movies)
                 {
-                    <option value="@movie.Id" >@movie.Title</option>
+                    <option value="@movie.Id">@movie.Title</option>
                 }
-                <!-- More film options -->
             </select>
         </div>
         <div class="mb-3">

@@ -23,8 +23,6 @@
 @inject ILogger<Checkout> logger;
 
 <div class="container-fluid"> 
-    @* <h3 class="text-center pb-3 mb-4 border-bottom">Checkout</h3> *@
-
     <div class="row">
 
         <!-- Checkout form section -->
@@ -108,7 +106,6 @@
                             </div>
                         }
 
-                        @* <button type="submit" class="btn btn-primary" @onclick="EventCallback.Factory.Create(this, Proceed)">Proceed</button> *@
                         <button type="submit" class="btn btn-primary" >Proceed</button>
 
                     </form>
@@ -194,13 +191,11 @@
                 var paymentResponse = await MollieService.CreatePaymentAsync(paymentRequest);
                 Console.WriteLine($"Payment successful. Response: {JsonSerializer.Serialize(paymentResponse)}");
 
-                //StateHasChanged();
                 navigationManager.NavigateTo("/Thankyou");
             }
             catch (Exception ex)
             {
                 logger.LogError($"Failed to create the payment: {ex.Message}");
-                // Handle the exception, e.g., display an error message to the user
             }
         }
     }

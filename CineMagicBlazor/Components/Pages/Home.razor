@@ -1,5 +1,4 @@
-﻿<!-- FilmListings.razor -->
-@page "/"
+﻿@page "/"
 @rendermode InteractiveServer
 @using CineMagicData.Models
 @using CineMagicBlazor.Services
@@ -7,7 +6,6 @@
 @inject NavigationManager NavigationManager
 <PageTitle>Home</PageTitle>
 <style>
-    /* Reset some default styling */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -20,90 +18,80 @@
       font-family: Arial, sans-serif;
     }
     
-    /* Sidebar styling */
     .filter-sidebar {
-      width: 200px; /* Adjust the width of the sidebar to your preference */
-      /*
-      background-color: #666363; !* Light grey background *!
-      */
-      height: 100vh; /* Full height of the viewport */
-      padding: 20px; /* Padding around the filter items */
-      overflow-y: auto; /* Enable scrolling if content is taller than the screen */
+      width: 200px; 
+      height: 100vh; 
+      padding: 20px; 
+      overflow-y: auto; 
       border-radius: 10px;
       
     }
     
-    /* Film listing styling */
     .film-listing {
-      flex-grow: 1; /* Take up remaining width */
+      flex-grow: 1; 
       padding: 20px;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust minmax values for your preferred card size */
-      gap: 20px; /* Space between cards */
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+      gap: 20px; 
     }
     
-    /* Film card styling */
+   
     .film-card {
-      /*
-      border: 1px solid #ddd; !* Light grey border *!
-      */
+     
       position: relative;
-      overflow: hidden; /* Ensure that content does not overflow */
+      overflow: hidden;
       border-radius: 5px;;
     }
     
     .film-card img {
-      width: 100%; /* Make image fill the card */
-      height: auto; /* Keep the aspect ratio */
+      width: 100%; 
+      height: auto; 
     }
     
-    /* Basic info styling */
+   
     .film-info {
       padding: 10px;
-      background: #666363; /* White background */
+      background: #666363; 
       color: white;
     }
     
-    /* Expand button styling */
     .expand-details {
       position: absolute;
       top: 10px;
       right: 10px;
-      background: #007bff; /* Bootstrap primary blue */
+      background: #007bff; 
       color: white;
       border: none;
       border-radius: 50%;
-      width: 30px; /* Size of the button */
+      width: 30px; 
       height: 30px;
       text-align: center;
-      line-height: 30px; /* Vertically center the plus sign */
+      line-height: 30px; 
       cursor: pointer;
       font-size: 20px;
     }
     
-    /* Additional details section, hidden by default */
     .additional-details {
-      display: none; /* Hide details by default */
+      display: none; 
       padding: 10px;
-      background: #f8f9fa; /* Light background for the details */
+      background: #f8f9fa; 
     }
     
-    /* When a card is expanded, display the additional details */
     .film-card.expanded .additional-details {
       display: block;
     }
     
-    /* Styling for the filter items */
+    
     .filter-sidebar div {
       padding: 10px;
-      margin-bottom: 8px; /* Space between filters */
-      background-color: #e9ecef; /* Light background for the filter items */
+      margin-bottom: 8px; 
+      background-color: #e9ecef; 
       cursor: pointer;
     }
     
-    /* Hover effect for filter items */
+    
     .filter-sidebar div:hover {
-      background-color: #dee2e6; /* Slightly darker on hover */
+      background-color: #dee2e6; 
     }
 </style>
 <script>
@@ -120,7 +108,7 @@
 </script>
 
 <div class="filter-sidebar" style="margin-top:300px;height: 800px; ">
-    <!-- Filter options go here -->
+    <!-- Filter options -->
     <div style="background-color:#666363;  color:white; border-radius: 10px;">
         <label class="form-label" for="search">Search</label>
         <input @bind="searchTerm" class="form-control" name="search" id="search"/>
@@ -151,7 +139,6 @@
 </div>
 
 <section style="margin-left: 200px; margin-top: -975px !important; border-radius: 10px; " class="film-listing">
-    <!-- Demo film card -->
     @foreach (var movie in _movies)
     {
         <div class="film-card">
@@ -161,11 +148,6 @@
                 <p>@movie.Description</p>
                 <button type="button" @onclick="() => { NavigateTo(movie.Id); }" class="btn btn-primary">Info</button>
             </div>
-            @*<button class="expand-details" @onclick="() => ToggleDetails(movie)">+</button>
-            <div class="additional-details" style="">
-                <p>Director: </p>
-                <p>Cast: </p>
-            </div>*@
         </div>
     }
 </section>
@@ -180,12 +162,6 @@
     protected override async Task OnInitializedAsync()
     {
         _movies = (await MovieService.GetAllMovies()).ToList();
-    }
-
-    // Method to toggle the details visibility
-    void ToggleDetails(Movie movie)
-    {
-        // movie.IsExpanded = !movie.IsExpanded;
     }
 
     public void NavigateTo(int id)

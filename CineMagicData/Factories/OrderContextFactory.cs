@@ -9,10 +9,9 @@ public class OrderContextFactory : IDesignTimeDbContextFactory<Contexts.OrderCon
 {
     public Contexts.OrderContext CreateDbContext(string[] args)
     {
-        // Up to the solution directory
+         //Getting api directory   
         var solutionPath = Path.Combine(Directory.GetCurrentDirectory(), "..");
 
-        // Navigate to the CineMagicApi project directory
         var projectPath = Path.Combine(solutionPath, "CineMagicApi");
 
         IConfigurationRoot configuration = new ConfigurationBuilder()
@@ -20,8 +19,7 @@ public class OrderContextFactory : IDesignTimeDbContextFactory<Contexts.OrderCon
             .AddJsonFile("appsettings.json")
             .Build();
 
-        // var connectionString = configuration.GetConnectionString("default");
-
+        //Returning to context
         return new Contexts.OrderContext(configuration);
     }
 }

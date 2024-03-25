@@ -9,10 +9,9 @@ public class StaffContextFactory : IDesignTimeDbContextFactory<Contexts.StaffCon
 {
     public Contexts.StaffContext CreateDbContext(string[] args)
     {
-        // Up to the solution directory
+        //Getting api directory
         var solutionPath = Path.Combine(Directory.GetCurrentDirectory(), "..");
 
-        // Navigate to the CineMagicApi project directory
         var projectPath = Path.Combine(solutionPath, "CineMagicApi");
 
         IConfigurationRoot configuration = new ConfigurationBuilder()
@@ -20,8 +19,7 @@ public class StaffContextFactory : IDesignTimeDbContextFactory<Contexts.StaffCon
             .AddJsonFile("appsettings.json")
             .Build();
 
-        // var connectionString = configuration.GetConnectionString("default");
-
+        //Returning to context
         return new Contexts.StaffContext(configuration);
     }
 }

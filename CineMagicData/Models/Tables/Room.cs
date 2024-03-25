@@ -17,6 +17,5 @@ public class Room
 
     public int? size { get; set; }
     
-    // public ICollection<Seat> Seats { get; set; }
 
 }

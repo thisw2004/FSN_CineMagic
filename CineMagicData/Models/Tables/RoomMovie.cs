@@ -17,10 +17,7 @@ public class RoomMovie
 
     [Required] 
     public DateTime DateTime { get; set; }
-    //
-    // public Room Room { get; set; }
-    //
-    // public Movie Movie { get; set; }
+   
 }
 
 public class GetRoomMovie

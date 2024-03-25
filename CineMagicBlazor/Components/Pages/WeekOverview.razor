@@ -22,7 +22,6 @@
                             @show.Movie.Title om @show.DateTime.ToString("HH:mm") in zaal @show.Room.room_number
                         </div>
                     }
-
                 </div>
             }
         </div>
@@ -36,11 +35,5 @@
     protected override async Task OnInitializedAsync()
     {
         _shows = (await ShowService.GetGroupedShows()).ToList();
-    }
-    
-    private void setDates()
-    {
-        
-
     }
 }

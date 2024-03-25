@@ -24,21 +24,20 @@
     <div class="print-actions">
         <button class="print-button"><a href="./PrintPDF">Print tickets</a></button>
         <p>Or use the code below at the cinema:</p>
-        <p class="code">@cinemaCode</p> <!--CHANGE HERE-->
+        <p class="code">@cinemaCode</p>
     </div>
 </div>
 
 @code {
-    private string movieTitle = "Your Chosen Movie Title"; // Replace with actual movie title
+    private string movieTitle = "Your Chosen Movie Title"; 
     private List<Ticket> tickets = new List<Ticket>()
     {
         new Ticket { Type = 1, Quantity = 3, Price = 10.00m }, // Updated prices
         new Ticket { Type = 2, Quantity = 1, Price = 20.00m },
-        // ... add more ticket types as needed
     };
-    private int totalTickets => tickets.Sum(t => t.Quantity); // Compute total tickets dynamically
-    private decimal totalPrice => tickets.Sum(t => t.Quantity * t.Price); // Compute total price dynamically
-    private string cinemaCode = "123456"; // Cinema code  /*CHANGE HERE*/
+    private int totalTickets => tickets.Sum(t => t.Quantity);
+    private decimal totalPrice => tickets.Sum(t => t.Quantity * t.Price); 
+    private string cinemaCode = "123456"; 
 
     public class Ticket
     {

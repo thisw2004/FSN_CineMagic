@@ -90,6 +90,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lRGF0YS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/jorik/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/Maps.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNYXBzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jorik/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/PrintPDF.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQcmludFBERi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jorik/RiderProjects/FSN_CineMagic/CineMagicBlazor/Components/Pages/ThanksForOrder.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUaGFua3NGb3JPcmRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

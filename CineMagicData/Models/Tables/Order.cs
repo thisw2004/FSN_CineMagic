@@ -27,7 +27,7 @@ public class Order
     public string? CardNumber { get; set; }
     
     [Required]
-    public DateTime? ExpiryDate { get; set; } // Stored as string to accommodate different formats
+    public DateTime? ExpiryDate { get; set; }
     
     [Required, RegularExpression(@"\d{3,4}", ErrorMessage = "CVV must be 3 or 4 digits.")]
     public string? CVV { get; set; }

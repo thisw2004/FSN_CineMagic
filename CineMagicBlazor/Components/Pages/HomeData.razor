@@ -13,7 +13,7 @@ Welcome to your new app.
 
 
 <div class="filter-sidebar">
-    <!-- Filter options go here -->
+    <!-- Filter options -->
     <div>
         <label class="form-label" for="search">Search</label>
         <input @bind="searchTerm" class="form-control" name="search" id="search"/>
@@ -55,7 +55,6 @@ Welcome to your new app.
                 <p>@movie.Description</p>
                 <button type="button" @onclick="() => { NavigateTo(movie.Id); }" class="btn btn-primary">Info</button>
             </div>
-            <button class="expand-details" @onclick="() => ToggleDetails(movie)">+</button>
             <div class="additional-details" style="">
                 <p>Director: </p>
                 <p>Cast: </p>
@@ -75,12 +74,6 @@ Welcome to your new app.
     protected override async Task OnInitializedAsync()
     {
         _movies = (await MovieService.GetAllMovies()).ToList();
-    }
-
-    // Method to toggle the details visibility
-    void ToggleDetails(Movie movie)
-    {
-        // movie.IsExpanded = !movie.IsExpanded;
     }
 
     public void NavigateTo(int id)

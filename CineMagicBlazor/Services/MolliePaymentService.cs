@@ -32,13 +32,11 @@ namespace CineMagicBlazor.Services
             try
             {
                 var result = await _paymentClient.CreatePaymentAsync(paymentRequest);
-                // Log success
                 _logger.LogInformation($"Payment created successfully, ID: {result.Id}");
                 return result;
             }
             catch (Exception ex)
             {
-                // Log error
                 _logger.LogError($"Error creating payment: {ex.Message}");
                 throw;
             }

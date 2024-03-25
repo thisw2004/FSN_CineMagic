@@ -9,19 +9,17 @@ public class MovieContextFactory : IDesignTimeDbContextFactory<Contexts.MovieCon
 {
     public Contexts.MovieContext CreateDbContext(string[] args)
     {
-        // Up to the solution directory
+        //Getting api directory
         var solutionPath = Path.Combine(Directory.GetCurrentDirectory(), "..");
 
-        // Navigate to the CineMagicApi project directory
         var projectPath = Path.Combine(solutionPath, "CineMagicApi");
 
         IConfigurationRoot configuration = new ConfigurationBuilder()
             .SetBasePath(projectPath)
             .AddJsonFile("appsettings.json")
             .Build();
-
-        // var connectionString = configuration.GetConnectionString("default");
-
+        
+        //Returning to context
         return new Contexts.MovieContext(configuration);
     }
 }
